@@ -1,0 +1,34 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Folders
+bin/
+obj/
+Debug/
+Release/
+
+# Rider/JetBrains
+.idea/
+*.iml
+
+# NuGet
+*.nupkg
+packages/
+# Uncomment if using Visual Studio package restore
+# packages/*.nupkg
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Others
+*.log
+*.tlog
+*.lastbuildstate
+*.vsix
+*.cache
+*.dbmdl
