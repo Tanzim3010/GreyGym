@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -47,25 +50,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.btnHLogin = new System.Windows.Forms.Button();
+            this.btnPack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -87,6 +88,36 @@
             this.panel1.Size = new System.Drawing.Size(1034, 575);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Location = new System.Drawing.Point(3, 1112);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1022, 49);
+            this.panel3.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(543, 18);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(458, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Built for strength. Designed for control. GreyGym.";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(233, 17);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Made by : Tanzim,Sady,Omi";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -103,6 +134,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.label9.Location = new System.Drawing.Point(25, 923);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(345, 25);
@@ -135,6 +167,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.label7.Location = new System.Drawing.Point(424, 692);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 25);
@@ -147,6 +180,7 @@
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(30, 638);
             this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Padding = new System.Windows.Forms.Padding(8);
             this.pictureBox5.Size = new System.Drawing.Size(377, 232);
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
@@ -157,6 +191,7 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(600, 894);
             this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(8);
             this.pictureBox4.Size = new System.Drawing.Size(387, 212);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -167,6 +202,7 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(600, 378);
             this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(8);
             this.pictureBox3.Size = new System.Drawing.Size(370, 183);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -186,6 +222,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.label5.Location = new System.Drawing.Point(25, 471);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 25);
@@ -196,6 +233,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.label4.Location = new System.Drawing.Point(304, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(476, 25);
@@ -208,6 +246,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(30, 163);
             this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(8);
             this.pictureBox2.Size = new System.Drawing.Size(393, 255);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -216,6 +255,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.label3.Location = new System.Drawing.Point(428, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 25);
@@ -235,6 +275,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.pictureBox1.BackgroundImage = global::GreyGym.Properties.Resources.image_removebg_preview;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
@@ -247,8 +288,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnHLogin);
+            this.panel2.Controls.Add(this.btnPack);
             this.panel2.Location = new System.Drawing.Point(34, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1034, 34);
@@ -265,55 +306,37 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "GreyGym";
             // 
-            // button2
+            // btnHLogin
             // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(881, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(124)))), ((int)(((byte)(250)))));
+            this.btnHLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHLogin.ForeColor = System.Drawing.Color.White;
+            this.btnHLogin.Location = new System.Drawing.Point(881, 3);
+            this.btnHLogin.Name = "btnHLogin";
+            this.btnHLogin.Size = new System.Drawing.Size(123, 28);
+            this.btnHLogin.TabIndex = 1;
+            this.btnHLogin.Text = "Login";
+            this.btnHLogin.UseVisualStyleBackColor = false;
+            this.btnHLogin.MouseLeave += new System.EventHandler(this.btnHLogin_MouseLeave);
+            this.btnHLogin.MouseHover += new System.EventHandler(this.btnHLogin_MouseHover);
             // 
-            // button1
+            // btnPack
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(744, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Packages";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(3, 1112);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1022, 49);
-            this.panel3.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(233, 17);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Made by : Tanzim,Sady,Omi";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("JetBrains Mono NL Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(543, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(458, 17);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Built for strength. Designed for control. GreyGym.";
+            this.btnPack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(124)))), ((int)(((byte)(250)))));
+            this.btnPack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPack.ForeColor = System.Drawing.Color.White;
+            this.btnPack.Location = new System.Drawing.Point(744, 3);
+            this.btnPack.Name = "btnPack";
+            this.btnPack.Size = new System.Drawing.Size(120, 28);
+            this.btnPack.TabIndex = 0;
+            this.btnPack.Text = "Packages";
+            this.btnPack.UseVisualStyleBackColor = false;
+            this.btnPack.MouseLeave += new System.EventHandler(this.btnPack_MouseLeave);
+            this.btnPack.MouseHover += new System.EventHandler(this.btnPack_MouseHover);
             // 
             // HomePage
             // 
@@ -332,6 +355,8 @@
             this.Text = "GreyGym";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -339,8 +364,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -351,8 +374,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHLogin;
+        private System.Windows.Forms.Button btnPack;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
