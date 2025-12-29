@@ -16,7 +16,7 @@ namespace GreyGym
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerHome());
+            Application.Run(new Packages());
         }
     }
 }
