@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,6 +96,13 @@ namespace GreyGym
             this.Hide();
             HomePage hp = new HomePage();
             hp.Show();
+        }
+
+        private void linlabRegi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Registration rg = new Registration();
+            rg.Show();
         }
     }
 }

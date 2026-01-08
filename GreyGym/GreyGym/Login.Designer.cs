@@ -151,6 +151,7 @@
             this.linlabRegi.TabIndex = 9;
             this.linlabRegi.TabStop = true;
             this.linlabRegi.Text = "Don\'t have an account?";
+            this.linlabRegi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linlabRegi_LinkClicked);
             this.linlabRegi.MouseLeave += new System.EventHandler(this.linlabRegi_MouseLeave);
             this.linlabRegi.MouseHover += new System.EventHandler(this.linlabRegi_MouseHover);
             // 
