@@ -83,5 +83,18 @@ namespace GreyGym
             linlabRegi.LinkColor = Color.FromArgb(51, 51, 76);
         }
 
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            HomePage hp = new HomePage();
+            hp.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage hp = new HomePage();
+            hp.Show();
+        }
     }
 }

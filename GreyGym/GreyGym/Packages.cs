@@ -36,5 +36,19 @@ namespace GreyGym
         {
             btnHLogin.BackColor = Color.FromArgb(74, 108, 230);
         }
+
+        private void btnPack_Click(object sender, EventArgs e)
+        {
+            HomePage hp = new HomePage();
+            this.Hide();
+            hp.Show();
+        }
+
+        private void Packages_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            HomePage hp = new HomePage();
+            this.Hide();
+            hp.Show();
+        }
     }
 }

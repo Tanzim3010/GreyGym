@@ -319,6 +319,7 @@
             this.btnHLogin.TabIndex = 1;
             this.btnHLogin.Text = "Login";
             this.btnHLogin.UseVisualStyleBackColor = false;
+            this.btnHLogin.Click += new System.EventHandler(this.btnHLogin_Click);
             this.btnHLogin.MouseLeave += new System.EventHandler(this.btnHLogin_MouseLeave);
             this.btnHLogin.MouseHover += new System.EventHandler(this.btnHLogin_MouseHover);
             // 
@@ -335,6 +336,7 @@
             this.btnPack.TabIndex = 0;
             this.btnPack.Text = "Packages";
             this.btnPack.UseVisualStyleBackColor = false;
+            this.btnPack.Click += new System.EventHandler(this.btnPack_Click);
             this.btnPack.MouseLeave += new System.EventHandler(this.btnPack_MouseLeave);
             this.btnPack.MouseHover += new System.EventHandler(this.btnPack_MouseHover);
             // 

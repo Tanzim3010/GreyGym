@@ -32,56 +32,56 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHLogin = new System.Windows.Forms.Button();
             this.btnPack = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +121,26 @@
             this.panel3.Size = new System.Drawing.Size(260, 320);
             this.panel3.TabIndex = 0;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Location = new System.Drawing.Point(-4, -4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(263, 43);
+            this.panel8.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(82, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "[Starter]";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -154,17 +174,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Short-term gym access \r\n\r\nBasic equipment usage\r\n\r\nNo long-term commitment";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(82, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "[Starter]";
-            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -176,6 +185,26 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(260, 320);
             this.panel7.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel9.Controls.Add(this.label22);
+            this.panel9.Location = new System.Drawing.Point(-1, -1);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(267, 40);
+            this.panel9.TabIndex = 5;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(85, 5);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(76, 25);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "[Basic]";
             // 
             // label19
             // 
@@ -223,6 +252,26 @@
             this.panel6.Size = new System.Drawing.Size(260, 320);
             this.panel6.TabIndex = 4;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel10.Controls.Add(this.label23);
+            this.panel10.Location = new System.Drawing.Point(-1, -1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(260, 40);
+            this.panel10.TabIndex = 5;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(78, 7);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(102, 25);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "[Student]";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -255,53 +304,6 @@
             this.label17.Size = new System.Drawing.Size(145, 140);
             this.label17.TabIndex = 1;
             this.label17.Text = "Full gym access\r\n\r\nOff-peak hour usage\r\n\r\nGroup classes\r\n\r\nDiscounted pricing";
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.panel12);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Location = new System.Drawing.Point(269, 329);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(260, 320);
-            this.panel5.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(19, 250);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(211, 51);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Price: BDT 2000 (for 6 months) \r\n                   or\r\nBDT 2500 ( for 12 months)" +
-    "";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.label12.Location = new System.Drawing.Point(22, 221);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 20);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Duration : 6/12 months";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.label13.Location = new System.Drawing.Point(19, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(178, 160);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Unlimited gym access\r\n\r\nPersonal trainer sessions\r\n(limited per month)\r\n\r\nCustomi" +
-    "zed workout plan\r\n\r\nBasic nutrition guidance\r\n";
             // 
             // panel4
             // 
@@ -348,6 +350,103 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "Full gym access\r\n\r\nGroup fitness classes \r\n\r\nBasic trainer guidance\r\n\r\nLocker and" +
     " shower facilities\r\n";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel11.Controls.Add(this.label14);
+            this.panel11.Controls.Add(this.label18);
+            this.panel11.Location = new System.Drawing.Point(-1, -1);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(260, 40);
+            this.panel11.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "★ Most Popular";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(73, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 25);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "[Standard]";
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.panel12);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Location = new System.Drawing.Point(269, 329);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(260, 320);
+            this.panel5.TabIndex = 5;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Gold;
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Location = new System.Drawing.Point(-1, -1);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(260, 40);
+            this.panel12.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(71, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "[Premium]";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(19, 250);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(211, 51);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Price: BDT 2000 (for 6 months) \r\n                   or\r\nBDT 2500 ( for 12 months)" +
+    "";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.label12.Location = new System.Drawing.Point(22, 221);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(175, 20);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Duration : 6/12 months";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.label13.Location = new System.Drawing.Point(19, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(178, 160);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Unlimited gym access\r\n\r\nPersonal trainer sessions\r\n(limited per month)\r\n\r\nCustomi" +
+    "zed workout plan\r\n\r\nBasic nutrition guidance\r\n";
             // 
             // label4
             // 
@@ -422,107 +521,9 @@
             this.btnPack.TabIndex = 0;
             this.btnPack.Text = "Home";
             this.btnPack.UseVisualStyleBackColor = false;
+            this.btnPack.Click += new System.EventHandler(this.btnPack_Click);
             this.btnPack.MouseLeave += new System.EventHandler(this.btnPack_MouseLeave);
             this.btnPack.MouseHover += new System.EventHandler(this.btnPack_MouseHover);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(-4, -4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(263, 43);
-            this.panel8.TabIndex = 4;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(85, 5);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 25);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "[Basic]";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel9.Controls.Add(this.label22);
-            this.panel9.Location = new System.Drawing.Point(-1, -1);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(267, 40);
-            this.panel9.TabIndex = 5;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(78, 7);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(102, 25);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "[Student]";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel10.Controls.Add(this.label23);
-            this.panel10.Location = new System.Drawing.Point(-1, -1);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(260, 40);
-            this.panel10.TabIndex = 5;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Location = new System.Drawing.Point(-1, -1);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(260, 40);
-            this.panel11.TabIndex = 6;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(73, 7);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 25);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "[Standard]";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Gold;
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(-1, -1);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(260, 40);
-            this.panel12.TabIndex = 6;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(71, 7);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "[Premium]";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "★ Most Popular";
             // 
             // Packages
             // 
@@ -539,32 +540,33 @@
             this.Name = "Packages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GreyGym";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Packages_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
