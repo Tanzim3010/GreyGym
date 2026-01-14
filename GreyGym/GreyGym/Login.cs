@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -103,6 +104,46 @@ namespace GreyGym
             this.Hide();
             Registration rg = new Registration();
             rg.Show();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string Gmail = txtEmail.Text;
+            string Password = txtPass.Text;
+
+            try
+            {
+                var connection = new SqlConnection();
+                connection.ConnectionString = "Data Source=SHADEBREAKER\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                connection.Open();
+
+                var cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = $"select * from UserInfo where Gmail = '{Gmail}' and Password = '{Password}'";
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+
+                DataTable dt = ds.Tables[0];
+                connection.Close();
+
+                if (dt.Rows.Count != 1)
+                {
+                    MessageBox.Show("Invalid Email or Password");
+                    return;
+                }
+  
+                    int userId = Convert.ToInt32(dt.Rows[0]["ID"]);
+                    Session.ID = userId;
+                    CustomerHome ch = new CustomerHome();
+                    this.Hide();
+                    ch.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

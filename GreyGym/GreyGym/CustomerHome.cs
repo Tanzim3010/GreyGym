@@ -12,9 +12,15 @@ namespace GreyGym
 {
     public partial class CustomerHome : Form
     {
+        int userId = Session.ID;
         public CustomerHome()
         {
             InitializeComponent();
+        }
+
+        private void CustomerHome_Load(object sender, EventArgs e)
+        {
+            txtId.Text = userId.ToString();
         }
     }
 }
