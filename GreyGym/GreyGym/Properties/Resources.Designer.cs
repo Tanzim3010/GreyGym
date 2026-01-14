@@ -63,6 +63,26 @@ namespace GreyGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _71de1a123637063_Y3JvcCwxMzgyLDEwODEsMzA0LDA {
+            get {
+                object obj = ResourceManager.GetObject("71de1a123637063.Y3JvcCwxMzgyLDEwODEsMzA0LDA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BKash_Group_of_Logos_08 {
+            get {
+                object obj = ResourceManager.GetObject("BKash-Group-of-Logos-08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap health_club_without_people_with_exercise_equipment {
             get {
                 object obj = ResourceManager.GetObject("health-club-without-people-with-exercise-equipment", resourceCulture);
@@ -103,9 +123,29 @@ namespace GreyGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_home_351 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-home-351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_membership_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-membership-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_membership_351 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-membership-351", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +193,16 @@ namespace GreyGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_profile_351 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-profile-351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("image-Photoroom", resourceCulture);
@@ -173,6 +223,16 @@ namespace GreyGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_Photoroom__2_2 {
+            get {
+                object obj = ResourceManager.GetObject("image-Photoroom (2)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_Photoroom__3_ {
             get {
                 object obj = ResourceManager.GetObject("image-Photoroom (3)", resourceCulture);
@@ -186,6 +246,16 @@ namespace GreyGym.Properties {
         internal static System.Drawing.Bitmap image_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP {
+            get {
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

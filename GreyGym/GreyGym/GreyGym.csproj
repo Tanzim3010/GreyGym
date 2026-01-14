@@ -52,6 +52,30 @@
     <Compile Include="CustomerHome.Designer.cs">
       <DependentUpon>CustomerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerialView%28User%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerialView%28User%29.Designer.cs">
+      <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManegerialView%28Amount%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManegerialView%28Amount%29.Designer.cs">
+      <DependentUpon>ManegerialView%28Amount%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageDash.Designer.cs">
+      <DependentUpon>PackageDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +105,18 @@
     <Compile Include="Session.cs" />
     <EmbeddedResource Include="CustomerHome.resx">
       <DependentUpon>CustomerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28User%29.resx">
+      <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManegerialView%28Amount%29.resx">
+      <DependentUpon>ManegerialView%28Amount%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageDash.resx">
+      <DependentUpon>PackageDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
