@@ -9,8 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using GreyGym;
 
-namespace project
+namespace GreyGym
 {
     public partial class ManegerialView_Amount_ : Form
     {
@@ -25,7 +26,7 @@ namespace project
             {
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = ApplicationHelper.cs;
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -54,6 +55,7 @@ namespace project
                 cmbPackage.DataSource = dt2;
                 cmbPackage.ValueMember = "ID";
                 cmbPackage.DisplayMember = "PackageName";
+                con.Close();
                 
                 
 
@@ -118,117 +120,134 @@ namespace project
             dataGridView1.ClearSelection();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.LoadData();
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
             string id = txtId.Text;
             string userId = cmbUser.SelectedValue.ToString();
-            string PackageId = cmbPackage.SelectedValue.ToString();
-            int amount = Convert.ToInt32( txtAmount.Text);
-            string Method = cmbMethod.Text;
-            string Status = cmbPaymetStatus.Text;
+            string packageId = cmbPackage.SelectedValue.ToString();
+            int amount = Convert.ToInt32(txtAmount.Text);
+            string method = cmbMethod.Text;
+            string status = cmbPaymetStatus.Text;
 
-
-            if(id == "Auto Generated")
+            if (id == "Auto Generated")
             {
-                try
-                {
-
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
-                    con.Open();
-
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-
-                    cmd.CommandText = $"insert into Amount values ({userId},{PackageId},{amount},'{Method}','{Status}')";
-
-                    cmd.ExecuteNonQuery();
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
+                MessageBox.Show("Please select a row first.");
+                return;
             }
-            else
+
+            try
             {
-                try
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ApplicationHelper.cs;
+                con.Open();
+
+                //Get OLD payment status
+                string oldStatus = "";
+
+                SqlCommand cmdOld = new SqlCommand();
+                cmdOld.Connection = con;
+                cmdOld.CommandText =
+                    $"select PaymentStatus from Amount where ID = {id}";
+
+                DataSet dsOld = new DataSet();
+                SqlDataAdapter adpOld = new SqlDataAdapter(cmdOld);
+                adpOld.Fill(dsOld);
+
+                if (dsOld.Tables[0].Rows.Count > 0)
                 {
-
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
-                    con.Open();
-
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-
-                    cmd.CommandText = $"update Amount set UserId ={userId} , PackageId = {PackageId} , Amount = {amount} , Method = '{Method}',PaymentStatus = '{Status}' where ID = {id}";
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Updated Successfully");
-                    this.LoadData();
-
-
-
-
+                    oldStatus = dsOld.Tables[0].Rows[0]["PaymentStatus"].ToString();
                 }
-                catch (Exception ex)
+
+                //Update Amount table
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText =
+                    $"update Amount set UserId={userId}, PackageId={packageId}, Amount={amount}, " +
+                    $"Method='{method}', PaymentStatus='{status}' where ID={id}";
+                cmd.ExecuteNonQuery();
+
+                if (oldStatus != "Confirmed" && status == "Confirmed")
                 {
-                    MessageBox.Show(ex.Message);
+                    //Checking active subscription
+                    SqlCommand cmdCheck = new SqlCommand();
+                    cmdCheck.Connection = con;
+                    cmdCheck.CommandText =
+                        $"select * from UserPackage where UserId = {userId} and IsActive = 'Yes'";
+
+                    DataSet dsCheck = new DataSet();
+                    SqlDataAdapter adpCheck = new SqlDataAdapter(cmdCheck);
+                    adpCheck.Fill(dsCheck);
+
+                    DataTable dtCheck = dsCheck.Tables[0];
+
+                    SqlCommand cmdPackage = new SqlCommand();
+                    cmdPackage.Connection = con;
+                    cmdPackage.CommandText = $"select Duration from Package where ID = {packageId}";
+                    DataSet dsPackage = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmdPackage);
+                    adp.Fill(dsPackage);
+
+
+                    int durationMonths = 1;
+                    if (dsPackage.Tables[0].Rows.Count > 0)
+                        durationMonths = Convert.ToInt32(dsPackage.Tables[0].Rows[0]["Duration"]);
+
+                    DateTime startDate = DateTime.Now;
+                    DateTime endDate = startDate.AddMonths(durationMonths);
+
+
+                    //NEW subscription
+                    if (dtCheck.Rows.Count == 0)
+                    {
+                        SqlCommand cmdPack = new SqlCommand();
+                        cmdPack.Connection = con;
+                        cmdPack.CommandText =
+                            $"insert into UserPackage (UserId, PackId, StartDate, EndDate, IsActive) " +
+                            $"values ({userId}, {packageId}, '{startDate}', '{endDate}', 'Yes')";
+                        cmdPack.ExecuteNonQuery();
+
+                        SqlCommand cmdTrainer = new SqlCommand();
+                        cmdTrainer.Connection = con;
+                        cmdTrainer.CommandText =
+                            $"insert into TrainerUser (CustomerID, PackID, AssignDate) " +
+                            $"values ({userId}, {packageId}, '{startDate}')";
+                        cmdTrainer.ExecuteNonQuery();
+
+                        SqlCommand cmdDiet = new SqlCommand();
+                        cmdDiet.Connection = con;
+                        cmdDiet.CommandText =
+                            $"insert into DietPlan (UserID,StartDate) " +
+                            $"values ({userId}, '{startDate}')";
+                        cmdDiet.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        DateTime currentEndDate = Convert.ToDateTime(dtCheck.Rows[0]["EndDate"]);
+                        DateTime newEndDate = currentEndDate.AddMonths(durationMonths);
+                        SqlCommand cmdRenew = new SqlCommand();
+                        cmdRenew.Connection = con;
+                        cmdRenew.CommandText =
+                            $"update UserPackage set EndDate = {newEndDate} " +
+                            $"where UserId = {userId} and IsActive = 'Yes'";
+                        cmdRenew.ExecuteNonQuery();
+                    }
                 }
+
+                con.Close();
+                MessageBox.Show("Updated Successfully");
+                this.LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text;
-            if (id == "Auto Generated")
-            {
-                MessageBox.Show("Please Select a row first.");
-                return;
-            }
 
-            var result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                try
-                {
-
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
-                    con.Open();
-
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-
-                    cmd.CommandText = $"delete from UserInfo where ID = {id}";
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Deleted Successfully");
-                    this.LoadData();
-                    this.RefreshAll();
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
         }
     }
 }

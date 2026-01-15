@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GreyGym;
 using Microsoft.SqlServer.Server;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace project
+namespace GreyGym
 {
     public partial class ManagerialView_User_ : Form
     {
@@ -33,7 +34,7 @@ namespace project
             {
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = ApplicationHelper.cs;
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -51,6 +52,8 @@ namespace project
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.Refresh();
                 dataGridView1.ClearSelection();
+
+                con.Close();
 
 
             }
@@ -136,7 +139,7 @@ namespace project
                 {
 
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                    con.ConnectionString = ApplicationHelper.cs;
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand();
@@ -148,7 +151,7 @@ namespace project
                     MessageBox.Show("Deleted Successfully");
                     this.LoadData();
                     this.RefreshAll();
-
+                    con.Close();
 
 
                 }
@@ -175,7 +178,7 @@ namespace project
                 try
                 {
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                    con.ConnectionString = ApplicationHelper.cs;
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand();
@@ -185,6 +188,7 @@ namespace project
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added Successfully");
                     this.LoadData();
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
@@ -199,7 +203,7 @@ namespace project
                 {
 
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                    con.ConnectionString = ApplicationHelper.cs;
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand();
@@ -225,6 +229,19 @@ namespace project
 
             }
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPaymet_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManegerialView_Amount_ mga = new ManegerialView_Amount_();
+            mga.Show();
+
         }
     }
 }

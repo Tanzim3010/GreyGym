@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GreyGym;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,10 @@ namespace project
 
         private void btnBkash_Click(object sender, EventArgs e)
         {
-            
+            int userId = Session.ID;
+            int PackageId = Session.PID;
+            int amount = Session.Amount;
+
             int number = Convert.ToInt32(textBkash.Text);
             if (textBkash.Text == "")
             {
@@ -37,13 +41,13 @@ namespace project
                     MessageBox.Show("Thank you for your Response");
 
                     SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                    con.ConnectionString = ApplicationHelper.cs;
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = "";
+                    cmd.CommandText = $"insert into Amount values ({userId},{PackageId},{amount},'Bkash','Pending')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 

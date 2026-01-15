@@ -114,7 +114,7 @@ namespace GreyGym
             try
             {
                 var connection = new SqlConnection();
-                connection.ConnectionString = "Data Source=SHADEBREAKER\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                connection.ConnectionString = ApplicationHelper.cs;
                 connection.Open();
 
                 var cmd = new SqlCommand();
@@ -136,9 +136,24 @@ namespace GreyGym
   
                     int userId = Convert.ToInt32(dt.Rows[0]["ID"]);
                     Session.ID = userId;
+                    Session.Name = dt.Rows[0]["Name"].ToString();
+                    string type = dt.Rows[0]["Usertype"].ToString();
+
+                if(type == "Customer")
+                {
                     CustomerHome ch = new CustomerHome();
                     this.Hide();
                     ch.Show();
+                }
+
+                else if(type == "Admin")
+                {
+                    ManagerialView_User_ mgu = new ManagerialView_User_();
+                    this.Hide();
+                    mgu.Show();
+                }
+                
+                    
             }
             catch (Exception ex)
             {

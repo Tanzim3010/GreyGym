@@ -416,14 +416,13 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(19, 250);
+            this.label11.Location = new System.Drawing.Point(38, 261);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(211, 51);
+            this.label11.Size = new System.Drawing.Size(164, 25);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Price: BDT 2000 (for 6 months) \r\n                   or\r\nBDT 2500 ( for 12 months)" +
-    "";
+            this.label11.Text = "Price: BDT 2500 ";
             // 
             // label12
             // 
@@ -432,9 +431,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
             this.label12.Location = new System.Drawing.Point(22, 221);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(175, 20);
+            this.label12.Size = new System.Drawing.Size(159, 20);
             this.label12.TabIndex = 2;
-            this.label12.Text = "Duration : 6/12 months";
+            this.label12.Text = "Duration : 12 months";
             // 
             // label13
             // 

@@ -46,11 +46,6 @@ namespace project
                  txtName.BackColor= Color.White;
             }
 
-
-
-           
-
-
              string email = "";
             email = textEmail.Text;
             if (email == "")
@@ -135,8 +130,7 @@ namespace project
                 try
                 {
                     SqlConnection con = new SqlConnection(); // Connection dewa
-                    con.ConnectionString =
-               "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                    con.ConnectionString = ApplicationHelper.cs;
 
                     con.Open();
 

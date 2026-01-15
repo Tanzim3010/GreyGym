@@ -169,5 +169,17 @@ namespace project
         {
 
         }
+
+        private void CustomerHome_Load(object sender, EventArgs e)
+        {
+            labWelcome.Text = Session.Name;
+        }
+
+        private void btnMember_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PackageDash pd = new PackageDash();
+            pd.Show();
+        }
     }
 }
