@@ -1,5 +1,4 @@
-﻿using GreyGym;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GreyGym;
 
 namespace project
 {
@@ -32,37 +32,26 @@ namespace project
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string name = textBox1.Text;
+            string name = txtName.Text;
             if (name == "")
             {
                
-
                 MessageBox.Show("Please Fill Your Name");
-                textBox1.Focus();
-                textBox1.BackColor = Color.DarkGray;
-                textBox1.ForeColor = Color.Black;
+                txtName.Focus();
+                txtName.BackColor = Color.DarkGray;
+                txtName.ForeColor = Color.Black;
 
                 return;
             }else {
-                 textBox1.BackColor= Color.White;
-            }
-
-            string Surname = txtSurname.Text;
-            if (Surname == "")
-            {
-                MessageBox.Show("Please Fill Surname");
-                txtSurname.Focus();
-                txtSurname.BackColor = Color.DarkGray;
-                return;
-
-            }
-            else
-            {
-                txtSurname.BackColor= Color.White;
+                 txtName.BackColor= Color.White;
             }
 
 
-                string email = "";
+
+           
+
+
+             string email = "";
             email = textEmail.Text;
             if (email == "")
             {
@@ -107,35 +96,23 @@ namespace project
            
             
 
-            string password = textBox2.Text;
-            string confirmPass = textBox3.Text;
+            string password = txtPass.Text;
+           
             if (password=="" )
             {
-                textBox2.BackColor = Color.DarkGray;
-                textBox3.BackColor = Color.DarkGray;
-                textBox3.ForeColor = Color.Blue;
+               
+                txtPass.BackColor = Color.DarkGray;
+                txtPass.ForeColor = Color.Blue;
                 MessageBox.Show("Password required");
-                textBox2.Focus();
+                txtPass.Focus();
                 
                 return;
             }
             else if (password.Length<=5) {
                 MessageBox.Show("More than 5 char required.");
                 return;
-            }else if (confirmPass == "")
-            {
-                MessageBox.Show("Fill up your confirm password.");
-                return;
-            }else if (password != confirmPass)
-            {
-                MessageBox.Show("Password match required");
-                return;
             }
-            else
-            {
-                textBox2.BackColor = Color.White;
-                textBox3.BackColor = Color.White;
-            }
+           
 
 
             string gender = "";
@@ -159,22 +136,16 @@ namespace project
                 {
                     SqlConnection con = new SqlConnection(); // Connection dewa
                     con.ConnectionString =
-               "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=oop2;Integrated Security=True;Encrypt=False";
+               "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
 
                     con.Open();
 
                     SqlCommand cmd = new SqlCommand(); // panel banano
                     cmd.Connection = con; // database select hoye gese
-                    cmd.CommandText = $"insert into Register values ('{name}','{Surname}','{email}','{phone}','{password}','{confirmPass}','{gender}')";
+                    cmd.CommandText = $"insert into UserInfo values ('{name}','{email}','{phone}','{password}','{gender}','Customer')";
                     cmd.ExecuteNonQuery();
                     con.Close();
-
-                    
-
-
-
-                    MessageBox.Show("Dear "+Surname+" Your Registration is Successful.");
-
+                 
 
 
                 }
@@ -183,15 +154,23 @@ namespace project
                     MessageBox.Show(ex.Message);
                 }
 
-             
+
+              MessageBox.Show("Dear " + name + " Your Registration is Successful.");
+
+              HomePage hp = new HomePage();
+              hp.Show();
+              this.Hide();
            
 
-            
+
+
+
+
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false ;
+            txtPass.UseSystemPasswordChar = false ;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -211,7 +190,7 @@ namespace project
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar=true;
+            txtPass.UseSystemPasswordChar=true;
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -224,15 +203,7 @@ namespace project
 
         }
 
-        private void pictureBox2_MouseHover(object sender, EventArgs e)
-        {
-            textBox3.UseSystemPasswordChar = false ;
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            textBox3.UseSystemPasswordChar = true;
-        }
+       
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
@@ -263,21 +234,9 @@ namespace project
 
         }
 
-        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            textBox3.UseSystemPasswordChar = false ;
-        }
 
-        private void pictureBox4_MouseLeave(object sender, EventArgs e)
-        {
-            textBox3 .UseSystemPasswordChar = true ;
-        }
-
-        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Hide();
-            Login lg = new Login();
-            lg.Show();
         }
     }
 }
