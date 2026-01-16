@@ -22,7 +22,7 @@ namespace project
         private void CustomerHome_Load(object sender, EventArgs e)
         {
             labWelcome.Text = Session.Name;
-            
+
             try
             {
                 SqlConnection con = new SqlConnection();
@@ -32,6 +32,7 @@ namespace project
                 DateTime now = DateTime.Now;
                 string nowStr = now.ToString("yyyy-MM-dd HH:mm:ss");
 
+                // Expire old packages
                 SqlCommand cmdExpire = new SqlCommand();
                 cmdExpire.Connection = con;
                 cmdExpire.CommandText =
@@ -39,6 +40,7 @@ namespace project
                     $"where EndDate < '{nowStr}' and IsActive = 'Yes'";
                 cmdExpire.ExecuteNonQuery();
 
+                // Check active package
                 SqlCommand cmdCheck = new SqlCommand();
                 cmdCheck.Connection = con;
                 cmdCheck.CommandText =
@@ -50,28 +52,42 @@ namespace project
                 SqlDataAdapter adp = new SqlDataAdapter(cmdCheck);
                 adp.Fill(ds);
 
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    string isActive = ds.Tables[0].Rows[0]["IsActive"].ToString();
-                    DateTime endDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["EndDate"]);
 
-                    if (isActive == "No")
-                    {
-                        MessageBox.Show(
-                            $"Your subscription has expired.\nPlease renew to continue.",
-                            "Subscription Expired",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning
-                        );
-                        this.Hide();
-                        PackageDash pd = new PackageDash();
-                        pd.Show();
-                    }
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    labPack.Text = "No active package";
+                    labTrainer.Text = "Not Assigned";
+                    labGoal.Text = "No goal set";
+                    rtxtDiet.Text = "Diet plan not assigned yet.";
+
+                    con.Close();
+                    return;
                 }
 
-                int packId = Convert.ToInt32(ds.Tables[0].Rows[0]["PackId"]);
 
-                //package name fetch
+                int packId = Convert.ToInt32(ds.Tables[0].Rows[0]["PackId"]);
+                string isActive = ds.Tables[0].Rows[0]["IsActive"].ToString();
+                DateTime endDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["EndDate"]);
+
+                if (isActive == "No")
+                {
+                    labPack.Text = "No active package";
+                    labTrainer.Text = "Not Assigned";
+                    labGoal.Text = "No goal set";
+                    rtxtDiet.Text = "Diet plan not assigned yet.";
+
+                    MessageBox.Show(
+                        "Your subscription has expired.\nPlease renew to continue.",
+                        "Subscription Expired",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    con.Close();
+                    return;
+                }
+
+                // Package name fetch
                 SqlCommand cmdPackage = new SqlCommand();
                 cmdPackage.Connection = con;
                 cmdPackage.CommandText =
@@ -86,14 +102,14 @@ namespace project
                 else
                     labPack.Text = "Unknown";
 
-               //trainer name fetch
+                // Trainer name fetch
                 SqlCommand cmdTrainer = new SqlCommand();
                 cmdTrainer.Connection = con;
                 cmdTrainer.CommandText =
                     "SELECT u.Name " +
                     "FROM TrainerUser tu " +
                     "JOIN UserInfo u ON tu.TrainerID = u.ID " +
-                    $"WHERE tu.CustomerID = {Session.ID} AND tu.PackID = {packId}" ;
+                    $"WHERE tu.CustomerID = {Session.ID} AND tu.PackID = {packId}";
 
                 DataSet dsTrainer = new DataSet();
                 new SqlDataAdapter(cmdTrainer).Fill(dsTrainer);
@@ -103,7 +119,7 @@ namespace project
                 else
                     labTrainer.Text = "Not Assigned";
 
-                //goal fetch
+                // Goal fetch
                 SqlCommand cmdGoal = new SqlCommand();
                 cmdGoal.Connection = con;
                 cmdGoal.CommandText =
@@ -117,7 +133,7 @@ namespace project
                 else
                     labGoal.Text = "No goal set";
 
-               //diet plan fetch
+                // Diet plan fetch
                 SqlCommand cmdDiet = new SqlCommand();
                 cmdDiet.Connection = con;
                 cmdDiet.CommandText =
