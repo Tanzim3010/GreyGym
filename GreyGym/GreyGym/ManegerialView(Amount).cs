@@ -226,12 +226,29 @@ namespace GreyGym
                     {
                         DateTime currentEndDate = Convert.ToDateTime(dtCheck.Rows[0]["EndDate"]);
                         DateTime newEndDate = currentEndDate.AddMonths(durationMonths);
+                        string newEndDateStr = newEndDate.ToString("yyyy-MM-dd HH:mm:ss");
+
                         SqlCommand cmdRenew = new SqlCommand();
                         cmdRenew.Connection = con;
                         cmdRenew.CommandText =
-                            $"update UserPackage set EndDate = {newEndDate} " +
+                            $"update UserPackage set EndDate = '{newEndDateStr}' " +
                             $"where UserId = {userId} and IsActive = 'Yes'";
                         cmdRenew.ExecuteNonQuery();
+
+                        //update package if upgraded
+                        SqlCommand cmdUpdatePack = new SqlCommand();
+                        cmdUpdatePack.Connection = con;
+                        cmdUpdatePack.CommandText =
+                            $"update UserPackage set PackId = {packageId} " +
+                            $"where UserId = {userId} and IsActive = 'Yes'";
+                        cmdUpdatePack.ExecuteNonQuery();
+
+                        SqlCommand cmdTrainerUpdate = new SqlCommand();
+                        cmdTrainerUpdate.Connection = con;
+                        cmdTrainerUpdate.CommandText =
+                            $"update TrainerUser set PackID = {packageId} " +
+                            $"where CustomerID = {userId}";
+                        cmdTrainerUpdate.ExecuteNonQuery();
                     }
                 }
 

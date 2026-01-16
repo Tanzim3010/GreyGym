@@ -19,35 +19,117 @@ namespace project
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void CustomerHome_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Insert()
-        {
+            labWelcome.Text = Session.Name;
+            
             try
             {
-
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-QTAP79E\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+                con.ConnectionString = ApplicationHelper.cs;
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+                DateTime now = DateTime.Now;
+                string nowStr = now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                cmd.CommandText = $"insert into Package values ('{"Starter"}')";
-                cmd.ExecuteNonQuery();
+                SqlCommand cmdExpire = new SqlCommand();
+                cmdExpire.Connection = con;
+                cmdExpire.CommandText =
+                    $"update UserPackage set IsActive = 'No' " +
+                    $"where EndDate < '{nowStr}' and IsActive = 'Yes'";
+                cmdExpire.ExecuteNonQuery();
+
+                SqlCommand cmdCheck = new SqlCommand();
+                cmdCheck.Connection = con;
+                cmdCheck.CommandText =
+                    $"SELECT PackId, IsActive, EndDate " +
+                    $"FROM UserPackage " +
+                    $"WHERE UserId = {Session.ID} AND IsActive = 'Yes'";
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmdCheck);
+                adp.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    string isActive = ds.Tables[0].Rows[0]["IsActive"].ToString();
+                    DateTime endDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["EndDate"]);
+
+                    if (isActive == "No")
+                    {
+                        MessageBox.Show(
+                            $"Your subscription has expired.\nPlease renew to continue.",
+                            "Subscription Expired",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning
+                        );
+                        this.Hide();
+                        PackageDash pd = new PackageDash();
+                        pd.Show();
+                    }
+                }
+
+                int packId = Convert.ToInt32(ds.Tables[0].Rows[0]["PackId"]);
+
+                //package name fetch
+                SqlCommand cmdPackage = new SqlCommand();
+                cmdPackage.Connection = con;
+                cmdPackage.CommandText =
+                    $"select PackageName from Package where ID = {packId}";
+
+                DataSet dsPackage = new DataSet();
+                SqlDataAdapter adp1 = new SqlDataAdapter(cmdPackage);
+                adp1.Fill(dsPackage);
+
+                if (dsPackage.Tables[0].Rows.Count > 0)
+                    labPack.Text = dsPackage.Tables[0].Rows[0]["PackageName"].ToString();
+                else
+                    labPack.Text = "Unknown";
+
+               //trainer name fetch
+                SqlCommand cmdTrainer = new SqlCommand();
+                cmdTrainer.Connection = con;
+                cmdTrainer.CommandText =
+                    "SELECT u.Name " +
+                    "FROM TrainerUser tu " +
+                    "JOIN UserInfo u ON tu.TrainerID = u.ID " +
+                    $"WHERE tu.CustomerID = {Session.ID} AND tu.PackID = {packId}" ;
+
+                DataSet dsTrainer = new DataSet();
+                new SqlDataAdapter(cmdTrainer).Fill(dsTrainer);
+
+                if (dsTrainer.Tables[0].Rows.Count > 0)
+                    labTrainer.Text = dsTrainer.Tables[0].Rows[0]["Name"].ToString();
+                else
+                    labTrainer.Text = "Not Assigned";
+
+                //goal fetch
+                SqlCommand cmdGoal = new SqlCommand();
+                cmdGoal.Connection = con;
+                cmdGoal.CommandText =
+                    $"select Goal from DietPlan where UserID = {Session.ID}";
+
+                DataSet dsGoal = new DataSet();
+                new SqlDataAdapter(cmdGoal).Fill(dsGoal);
+
+                if (dsGoal.Tables[0].Rows.Count > 0)
+                    labGoal.Text = dsGoal.Tables[0].Rows[0]["Goal"].ToString();
+                else
+                    labGoal.Text = "No goal set";
+
+               //diet plan fetch
+                SqlCommand cmdDiet = new SqlCommand();
+                cmdDiet.Connection = con;
+                cmdDiet.CommandText =
+                    $"select FoodPlan from DietPlan where UserID = {Session.ID}";
+
+                DataSet dsDiet = new DataSet();
+                new SqlDataAdapter(cmdDiet).Fill(dsDiet);
+
+                if (dsDiet.Tables[0].Rows.Count > 0)
+                    rtxtDiet.Text = dsDiet.Tables[0].Rows[0]["FoodPlan"].ToString();
+                else
+                    rtxtDiet.Text = "Diet plan not assigned yet.";
 
                 con.Close();
             }
@@ -55,124 +137,7 @@ namespace project
             {
                 MessageBox.Show(ex.Message);
             }
-        }
 
-        private void btnStarter_Click(object sender, EventArgs e)
-        {
-      
-            var sure =MessageBox.Show("Are you sure you want to buy 'STARTER PACKAGE'", "Confirmation", MessageBoxButtons.YesNo);
-            
-            
-
-            if (sure == DialogResult.Yes)
-            {
-
-                this.Insert();
-                Payment py = new Payment();
-                py.Show();
-                this.Hide();
-            }
-            else if(sure == DialogResult.No) {
-            
-                return;
-            }
-                
-            
-            
-            
-           
-        }
-
-        private void btnBasic_Click(object sender, EventArgs e)
-        {
-            var sure = MessageBox.Show("Are you sure you want to buy 'BASIC PACKAGE'", "Confirmation", MessageBoxButtons.YesNo);
-
-
-
-            if (sure == DialogResult.Yes)
-            {
-
-               
-            }
-            else if (sure == DialogResult.No)
-            {
-
-                return;
-            }
-
-        }
-
-        private void btnStudent_Click(object sender, EventArgs e)
-        {
-            var sure = MessageBox.Show("Are you sure you want to buy 'STUDENT PACKAGE'", "Confirmation", MessageBoxButtons.YesNo);
-
-
-
-            if (sure == DialogResult.Yes)
-            {
-
-               
-            }
-            else if (sure == DialogResult.No)
-            {
-
-                return;
-            }
-        }
-
-        private void btnStandard_Click(object sender, EventArgs e)
-        {
-            var sure = MessageBox.Show("Are you sure you want to buy 'STANDARD PACKAGE'", "Confirmation", MessageBoxButtons.YesNo);
-
-
-
-            if (sure == DialogResult.Yes)
-            {
-
-               
-            }
-            else if (sure == DialogResult.No)
-            {
-
-                return;
-            }
-
-        }
-
-      
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            var sure = MessageBox.Show("Are you sure you want to buy 'PREMIUM PACKAGE [12 month]'", "Confirmation", MessageBoxButtons.YesNo);
-
-
-
-            if (sure == DialogResult.Yes)
-            {
-
-          
-            }
-            else if (sure == DialogResult.No)
-            {
-
-                return;
-            }
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CustomerHome_Load(object sender, EventArgs e)
-        {
-            labWelcome.Text = Session.Name;
         }
 
         private void btnMember_Click(object sender, EventArgs e)

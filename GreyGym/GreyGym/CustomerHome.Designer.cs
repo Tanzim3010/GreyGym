@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnMember = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +47,9 @@
             this.labTrainer = new System.Windows.Forms.Label();
             this.labGoal = new System.Windows.Forms.Label();
             this.rtxtDiet = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnMember = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +66,46 @@
             this.panel1.Size = new System.Drawing.Size(259, 664);
             this.panel1.TabIndex = 3;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Azure;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::GreyGym.Properties.Resources.icons8_profile_35;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 363);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(253, 44);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Profile";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnMember
+            // 
+            this.btnMember.BackColor = System.Drawing.Color.Azure;
+            this.btnMember.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMember.Image = global::GreyGym.Properties.Resources.icons8_membership_35;
+            this.btnMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMember.Location = new System.Drawing.Point(3, 293);
+            this.btnMember.Name = "btnMember";
+            this.btnMember.Size = new System.Drawing.Size(253, 44);
+            this.btnMember.TabIndex = 9;
+            this.btnMember.Text = "Membership";
+            this.btnMember.UseVisualStyleBackColor = false;
+            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Azure;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GreyGym.Properties.Resources.icons8_home_35;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(253, 44);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -76,6 +116,16 @@
             this.label1.Size = new System.Drawing.Size(103, 27);
             this.label1.TabIndex = 7;
             this.label1.Text = "GreyGym";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::GreyGym.Properties.Resources.image_Photoroom__3_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 145);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -159,89 +209,39 @@
             // 
             // labPack
             // 
-            this.labPack.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPack.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPack.Location = new System.Drawing.Point(654, 198);
             this.labPack.Name = "labPack";
-            this.labPack.Size = new System.Drawing.Size(143, 37);
+            this.labPack.Size = new System.Drawing.Size(514, 37);
             this.labPack.TabIndex = 17;
             // 
             // labTrainer
             // 
-            this.labTrainer.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTrainer.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTrainer.Location = new System.Drawing.Point(654, 255);
             this.labTrainer.Name = "labTrainer";
-            this.labTrainer.Size = new System.Drawing.Size(143, 37);
+            this.labTrainer.Size = new System.Drawing.Size(514, 37);
             this.labTrainer.TabIndex = 18;
             // 
             // labGoal
             // 
-            this.labGoal.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labGoal.Location = new System.Drawing.Point(654, 318);
             this.labGoal.Name = "labGoal";
-            this.labGoal.Size = new System.Drawing.Size(143, 37);
+            this.labGoal.Size = new System.Drawing.Size(514, 37);
             this.labGoal.TabIndex = 19;
             // 
             // rtxtDiet
             // 
             this.rtxtDiet.BackColor = System.Drawing.SystemColors.Control;
             this.rtxtDiet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDiet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtDiet.Location = new System.Drawing.Point(625, 386);
+            this.rtxtDiet.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtDiet.Location = new System.Drawing.Point(661, 386);
             this.rtxtDiet.Name = "rtxtDiet";
             this.rtxtDiet.ReadOnly = true;
             this.rtxtDiet.Size = new System.Drawing.Size(803, 255);
             this.rtxtDiet.TabIndex = 20;
             this.rtxtDiet.Text = "";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Azure;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GreyGym.Properties.Resources.icons8_profile_35;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(253, 44);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Profile";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // btnMember
-            // 
-            this.btnMember.BackColor = System.Drawing.Color.Azure;
-            this.btnMember.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMember.Image = global::GreyGym.Properties.Resources.icons8_membership_35;
-            this.btnMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMember.Location = new System.Drawing.Point(3, 293);
-            this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(253, 44);
-            this.btnMember.TabIndex = 9;
-            this.btnMember.Text = "Membership";
-            this.btnMember.UseVisualStyleBackColor = false;
-            this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Azure;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GreyGym.Properties.Resources.icons8_home_35;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 44);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::GreyGym.Properties.Resources.image_Photoroom__3_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 145);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // CustomerHome
             // 
@@ -269,9 +269,9 @@
             this.Load += new System.EventHandler(this.CustomerHome_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
