@@ -28,6 +28,53 @@ namespace GreyGym
 
         }
 
+        private void RefreshAll()
+        {
+            txtName.Text = "";
+            txtPass.Text = "";
+            txtPhone.Text = "";
+            txtGmail.Text = "";
+            cmbGender.Text = "";
+
+            dataGridView1.ClearSelection();
+        }
+
+        private void LoadData()
+        {
+            try
+            {
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ApplicationHelper.cs;
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "select * from UserInfo";
+
+                DataSet ds = new DataSet();
+
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+
+                DataTable dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.Refresh();
+                dataGridView1.ClearSelection();
+
+                con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         private void UpdateInfo_Load(object sender, EventArgs e)
         {
             label2.Text = Session.Name;
@@ -99,16 +146,9 @@ namespace GreyGym
 
                 cmd.CommandText = $"update UserInfo set Name = '{name}',Gmail='{gmail}',Phone ='{phone}',Password='{pass}',Gender = '{gender}' where ID ={id}";
 
-                DataSet ds = new DataSet();
-
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                adp.Fill(ds);
-
-                DataTable dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView1.Refresh();
-                dataGridView1.ClearSelection();
+                cmd.ExecuteNonQuery();
+                this.LoadData();
+                this.RefreshAll();
 
                 con.Close();
 
