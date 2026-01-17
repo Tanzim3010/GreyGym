@@ -17,7 +17,7 @@ namespace GreyGym
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerialView_DietPlan_());
+            Application.Run(new HomePage());
         }
     }
 }

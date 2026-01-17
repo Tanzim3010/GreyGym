@@ -59,6 +59,12 @@
     <Compile Include="ManagerialView%28DietPlan%29.Designer.cs">
       <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerialView%28Packages%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerialView%28Packages%29.Designer.cs">
+      <DependentUpon>ManagerialView%28Packages%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerialView%28User%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +116,20 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Session.cs" />
+    <Compile Include="UpdateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfo.Designer.cs">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerHome.resx">
       <DependentUpon>CustomerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerialView%28DietPlan%29.resx">
       <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28Packages%29.resx">
+      <DependentUpon>ManagerialView%28Packages%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerialView%28User%29.resx">
       <DependentUpon>ManagerialView%28User%29.cs</DependentUpon>
@@ -149,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfo.resx">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

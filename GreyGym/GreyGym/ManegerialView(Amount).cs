@@ -208,19 +208,27 @@ namespace GreyGym
                             $"values ({userId}, {packageId}, '{startDate}', '{endDate}', 'Yes')";
                         cmdPack.ExecuteNonQuery();
 
-                        SqlCommand cmdTrainer = new SqlCommand();
-                        cmdTrainer.Connection = con;
-                        cmdTrainer.CommandText =
-                            $"insert into TrainerUser (CustomerID, PackID, AssignDate) " +
-                            $"values ({userId}, {packageId}, '{startDate}')";
-                        cmdTrainer.ExecuteNonQuery();
-
                         SqlCommand cmdDiet = new SqlCommand();
                         cmdDiet.Connection = con;
                         cmdDiet.CommandText =
                             $"insert into DietPlan (UserID,StartDate) " +
-                            $"values ({userId}, '{startDate}')";
-                        cmdDiet.ExecuteNonQuery();
+                            $"values ({userId}, '{startDate}')" +
+                            $"select ID from DietPlan where UserID = '{userId}'"; 
+
+
+                        DataSet dsDiet = new DataSet();
+                        SqlDataAdapter adpD = new SqlDataAdapter(cmdDiet);
+                        adpD.Fill(dsDiet);
+
+                        int dietId = Convert.ToInt32(dsDiet.Tables[0].Rows[0]["ID"]);
+
+                        SqlCommand cmdTrainer = new SqlCommand();
+                        cmdTrainer.Connection = con;
+                        cmdTrainer.CommandText =
+                            $"insert into TrainerUser (CustomerID, PackID, DietID, AssignDate) " +
+                            $"values ({userId}, {packageId}, {dietId}, '{startDate}')";
+                        cmdTrainer.ExecuteNonQuery();
+
                     }
                     else
                     {
