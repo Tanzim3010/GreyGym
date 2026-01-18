@@ -143,7 +143,7 @@ namespace GreyGym
                 con.ConnectionString = ApplicationHelper.cs;
                 con.Open();
 
-                //Get OLD payment status
+                //Getting OLD payment status
                 string oldStatus = "";
 
                 SqlCommand cmdOld = new SqlCommand();

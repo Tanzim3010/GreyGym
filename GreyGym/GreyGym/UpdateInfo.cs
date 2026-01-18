@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using project;
 
 namespace GreyGym
 {
@@ -41,6 +42,7 @@ namespace GreyGym
 
         private void LoadData()
         {
+            int id = Session.ID;
             try
             {
 
@@ -51,7 +53,7 @@ namespace GreyGym
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "select * from UserInfo";
+                cmd.CommandText = $"select Name,Gmail,Phone,Password,Gender from UserInfo where ID ={id}";
 
                 DataSet ds = new DataSet();
 
@@ -89,7 +91,7 @@ namespace GreyGym
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = $"select Name,Gmail,Phone,Password,Gender from UserInfo where id = {id}";
+                cmd.CommandText = $"select Name,Gmail,Phone,Password,Gender from UserInfo where ID = {id}";
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 adp.Fill(ds);
@@ -123,6 +125,8 @@ namespace GreyGym
             }
         }
 
+       
+
         private void button4_Click(object sender, EventArgs e)
         {
             int id = Session.ID;
@@ -147,6 +151,7 @@ namespace GreyGym
                 cmd.CommandText = $"update UserInfo set Name = '{name}',Gmail='{gmail}',Phone ='{phone}',Password='{pass}',Gender = '{gender}' where ID ={id}";
 
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Update Successfull");
                 this.LoadData();
                 this.RefreshAll();
 
@@ -163,6 +168,13 @@ namespace GreyGym
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerHome C = new CustomerHome();
+            C.Show();
+            this.Hide();
         }
     }
 }

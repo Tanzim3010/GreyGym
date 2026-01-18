@@ -162,5 +162,12 @@ namespace project
             PackageDash pd = new PackageDash();
             pd.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UpdateInfo U = new UpdateInfo();
+            U.Show();
+            this.Hide();
+        }
     }
 }

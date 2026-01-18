@@ -42,13 +42,13 @@ namespace GreyGym
                 cmd.Connection = con;
 
                 cmd.CommandText =
-                                    $"SELECT dp.ID, dp.UserID, ui.Name AS CustomerName, " +
+                                    $"select dp.ID, dp.UserID, ui.Name AS CustomerName, " +
                                     $"dp.TrainerID, ti.Name AS TrainerName, " +
                                     $"dp.CurrentWeight, dp.TargetWeight, dp.Goal, " +
                                     $"dp.FoodPlan, dp.StartDate " +
-                                    $"FROM DietPlan dp " +
-                                    $"INNER JOIN UserInfo ui ON ui.ID = dp.UserID " +
-                                    $"INNER JOIN UserInfo ti ON ti.ID = dp.TrainerID";
+                                    $"from DietPlan dp " +
+                                    $"inner join UserInfo ui ON ui.ID = dp.UserID " +
+                                    $"inner join UserInfo ti ON ti.ID = dp.TrainerID";
 
 
                 DataSet ds = new DataSet();
