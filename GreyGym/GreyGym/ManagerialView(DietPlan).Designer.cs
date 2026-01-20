@@ -54,21 +54,21 @@
             this.btnPaymet = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrainerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrainerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrainerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TargetWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Goal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -399,15 +399,15 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.TrainerName,
-            this.Column3,
+            this.ID,
+            this.UserID,
             this.CustomerName,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
+            this.TrainerID,
+            this.TrainerName,
+            this.CurrentWeight,
+            this.TargetWeight,
+            this.Goal,
+            this.FoodPlan,
             this.StartDate});
             this.dataGridView1.Location = new System.Drawing.Point(130, -2);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -419,102 +419,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1176, 578);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "ID";
-            this.Column1.FillWeight = 6.609796F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.DataPropertyName = "UserID";
-            this.Column2.FillWeight = 42.94689F;
-            this.Column2.HeaderText = "UserID";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // TrainerName
-            // 
-            this.TrainerName.DataPropertyName = "CustomerName";
-            this.TrainerName.HeaderText = "CustomerName";
-            this.TrainerName.Name = "TrainerName";
-            this.TrainerName.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.DataPropertyName = "TrainerID";
-            this.Column3.FillWeight = 42.94689F;
-            this.Column3.HeaderText = "TrainerID";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "TrainerName";
-            this.CustomerName.HeaderText = "TrainerName";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.DataPropertyName = "CurrentWeight";
-            this.Column4.FillWeight = 345.1777F;
-            this.Column4.HeaderText = "CurrentWt(kg)";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 85;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.DataPropertyName = "TargetWeight";
-            this.Column5.FillWeight = 178.5034F;
-            this.Column5.HeaderText = "TargetWt(Kg)";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 85;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.DataPropertyName = "Goal";
-            this.Column6.FillWeight = 42.94689F;
-            this.Column6.HeaderText = "Goal";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.DataPropertyName = "FoodPlan";
-            this.Column7.FillWeight = 42.94689F;
-            this.Column7.HeaderText = "FoodPlan";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // StartDate
-            // 
-            this.StartDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.StartDate.DataPropertyName = "StartDate";
-            this.StartDate.FillWeight = 42.94689F;
-            this.StartDate.HeaderText = "StartDate";
-            this.StartDate.Name = "StartDate";
-            this.StartDate.ReadOnly = true;
-            this.StartDate.Width = 110;
             // 
             // panel2
             // 
@@ -556,6 +460,17 @@
             this.panel1.Size = new System.Drawing.Size(1312, 53);
             this.panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(670, 5);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 37);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "DietPlan";
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -571,16 +486,101 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // label9
+            // ID
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(670, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 37);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "DietPlan";
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 6.609796F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // UserID
+            // 
+            this.UserID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.UserID.DataPropertyName = "UserID";
+            this.UserID.FillWeight = 42.94689F;
+            this.UserID.HeaderText = "UserID";
+            this.UserID.MinimumWidth = 6;
+            this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "CustomerName";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            // 
+            // TrainerID
+            // 
+            this.TrainerID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TrainerID.DataPropertyName = "TrainerID";
+            this.TrainerID.FillWeight = 42.94689F;
+            this.TrainerID.HeaderText = "TrainerID";
+            this.TrainerID.MinimumWidth = 6;
+            this.TrainerID.Name = "TrainerID";
+            this.TrainerID.ReadOnly = true;
+            // 
+            // TrainerName
+            // 
+            this.TrainerName.DataPropertyName = "TrainerName";
+            this.TrainerName.HeaderText = "TrainerName";
+            this.TrainerName.Name = "TrainerName";
+            this.TrainerName.ReadOnly = true;
+            // 
+            // CurrentWeight
+            // 
+            this.CurrentWeight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CurrentWeight.DataPropertyName = "CurrentWeight";
+            this.CurrentWeight.FillWeight = 345.1777F;
+            this.CurrentWeight.HeaderText = "CurrentWt(kg)";
+            this.CurrentWeight.MinimumWidth = 6;
+            this.CurrentWeight.Name = "CurrentWeight";
+            this.CurrentWeight.ReadOnly = true;
+            this.CurrentWeight.Width = 85;
+            // 
+            // TargetWeight
+            // 
+            this.TargetWeight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TargetWeight.DataPropertyName = "TargetWeight";
+            this.TargetWeight.FillWeight = 178.5034F;
+            this.TargetWeight.HeaderText = "TargetWt(Kg)";
+            this.TargetWeight.MinimumWidth = 6;
+            this.TargetWeight.Name = "TargetWeight";
+            this.TargetWeight.ReadOnly = true;
+            this.TargetWeight.Width = 85;
+            // 
+            // Goal
+            // 
+            this.Goal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Goal.DataPropertyName = "Goal";
+            this.Goal.FillWeight = 42.94689F;
+            this.Goal.HeaderText = "Goal";
+            this.Goal.MinimumWidth = 6;
+            this.Goal.Name = "Goal";
+            this.Goal.ReadOnly = true;
+            // 
+            // FoodPlan
+            // 
+            this.FoodPlan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FoodPlan.DataPropertyName = "FoodPlan";
+            this.FoodPlan.FillWeight = 42.94689F;
+            this.FoodPlan.HeaderText = "FoodPlan";
+            this.FoodPlan.MinimumWidth = 6;
+            this.FoodPlan.Name = "FoodPlan";
+            this.FoodPlan.ReadOnly = true;
+            // 
+            // StartDate
+            // 
+            this.StartDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.StartDate.DataPropertyName = "StartDate";
+            this.StartDate.FillWeight = 42.94689F;
+            this.StartDate.HeaderText = "StartDate";
+            this.StartDate.Name = "StartDate";
+            this.StartDate.ReadOnly = true;
+            this.StartDate.Width = 110;
             // 
             // ManagerialView_DietPlan_
             // 
@@ -638,16 +638,16 @@
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox rtxtFoodPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrainerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrainerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrainerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TargetWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Goal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
     }
 }

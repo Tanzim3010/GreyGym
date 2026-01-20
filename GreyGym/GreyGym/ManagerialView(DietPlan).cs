@@ -92,14 +92,14 @@ namespace GreyGym
         {
             if(e.RowIndex >= 0)
             {
-                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtTrainerName.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtCurrWt.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtTarWt.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                cmbGoal.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                rtxtFoodPlan.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-                dtpStart.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+                txtName.Text = dataGridView1.Rows[e.RowIndex].Cells["CustomerName"].Value.ToString();
+                txtTrainerName.Text = dataGridView1.Rows[e.RowIndex].Cells["TrainerName"].Value.ToString();
+                txtCurrWt.Text = dataGridView1.Rows[e.RowIndex].Cells["CurrentWeight"].Value.ToString();
+                txtTarWt.Text = dataGridView1.Rows[e.RowIndex].Cells["TargetWeight"].Value.ToString();
+                cmbGoal.Text = dataGridView1.Rows[e.RowIndex].Cells["Goal"].Value.ToString();
+                rtxtFoodPlan.Text = dataGridView1.Rows[e.RowIndex].Cells["FoodPlan"].Value.ToString();
+                dtpStart.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["StartDate"].Value);
             }
 
         }
@@ -133,6 +133,10 @@ namespace GreyGym
 
             if (id == "Auto Generated")
             {
+                var row = dataGridView1.CurrentRow;
+                int userId = Convert.ToInt32(row.Cells["UserID"].Value);
+                int trainerId = Convert.ToInt32(row.Cells["TrainerID"].Value);
+
                 try
                 {
                     SqlConnection con = new SqlConnection();
@@ -142,12 +146,18 @@ namespace GreyGym
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = con;
 
-                    cmd.CommandText = $"insert into DietPlan " +
-                                      $"(UserID, TrainerID, CurrentWeight, TargetWeight, Goal, FoodPlan, StartDate) " +
-                                      $"values ( " +
-                                      $"(select ID from UserInfo where Name = '{customerName}'), " +
-                                      $"(select ID from UserInfo where Name = '{trainerName}'), " +
-                                      $"{currWt}, {tarWt}, '{goal}', '{diet}', '{startDateStr}' )";
+                    cmd.CommandText =
+                                        "insert into DietPlan " +
+                                        "(UserID, TrainerID, CurrentWeight, TargetWeight, Goal, FoodPlan, StartDate) " +
+                                        "values (" +
+                                        $"{userId}, " +          
+                                        $"{trainerId}, " +       
+                                        $"{currWt}, " +
+                                        $"{tarWt}, " +
+                                        $"'{goal}', " +
+                                        $"'{diet}', " +
+                                        $"'{startDateStr}')";
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added Successfully");
                     this.LoadData();
@@ -161,6 +171,8 @@ namespace GreyGym
             }
             else
             {
+                var row = dataGridView1.CurrentRow;
+                int userId = Convert.ToInt32(row.Cells["UserID"].Value);
 
                 try
                 {
@@ -180,10 +192,35 @@ namespace GreyGym
                                       $"where ID = {id}";
                     cmd.ExecuteNonQuery();
 
+                    SqlCommand cmdGetWorkoutId = new SqlCommand();
+                    cmdGetWorkoutId.Connection = con;
+                    cmdGetWorkoutId.CommandText =
+                        $"select ID from WorkoutPlan where PlanName = '{goal}'";
+
+                    DataTable dtWorkout = new DataTable();
+                    SqlDataAdapter adpWorkout = new SqlDataAdapter(cmdGetWorkoutId);
+                    adpWorkout.Fill(dtWorkout);
+
+                    if (dtWorkout.Rows.Count > 0)
+                    {
+                        int workoutId = Convert.ToInt32(dtWorkout.Rows[0]["ID"]);
+
+                        SqlCommand cmdUpdateTrainerUser = new SqlCommand();
+                        cmdUpdateTrainerUser.Connection = con;
+                        cmdUpdateTrainerUser.CommandText =
+                            $"update TrainerUser set WorkOutID = {workoutId} " +
+                            $"where CustomerID = {userId}";
+                        cmdUpdateTrainerUser.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Workout plan not found for Goal: " + goal);
+                    }
+
                     MessageBox.Show("Updated Successfully");
                     this.LoadData();
                     this.RefreshAll();
-
+                    con.Close();
                 }
                 catch (Exception ex)
                 {
