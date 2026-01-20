@@ -53,6 +53,12 @@
     <Compile Include="CustomerHome.Designer.cs">
       <DependentUpon>CustomerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerialView%28TrainerUser%29 .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerialView%28TrainerUser%29 .Designer.cs">
+      <DependentUpon>ManagerialView%28TrainerUser%29 .cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerialView%28DietPlan%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="CustomerHome.resx">
       <DependentUpon>CustomerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerialView%28TrainerUser%29 .resx">
+      <DependentUpon>ManagerialView%28TrainerUser%29 .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerialView%28DietPlan%29.resx">
       <DependentUpon>ManagerialView%28DietPlan%29.cs</DependentUpon>
