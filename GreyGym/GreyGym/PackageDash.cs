@@ -192,5 +192,26 @@ namespace project
                 return;
             }
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerHome ch = new CustomerHome();
+            ch.Show();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdateInfo un = new UpdateInfo();
+            un.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

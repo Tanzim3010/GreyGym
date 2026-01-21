@@ -133,6 +133,16 @@ namespace GreyGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_logout_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-logout-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_membership_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-membership-35", resourceCulture);
@@ -196,6 +206,16 @@ namespace GreyGym.Properties {
         internal static System.Drawing.Bitmap icons8_profile_351 {
             get {
                 object obj = ResourceManager.GetObject("icons8-profile-351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_workout_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-workout-35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

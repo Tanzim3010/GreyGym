@@ -159,5 +159,11 @@ namespace GreyGym
             return panel;
         }
 
+        private void btnHLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login lg = new Login();
+            lg.Show();
+        }
     }
 }

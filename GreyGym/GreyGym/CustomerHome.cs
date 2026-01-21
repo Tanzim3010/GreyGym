@@ -112,7 +112,8 @@ namespace project
                     $"WHERE tu.CustomerID = {Session.ID} AND tu.PackID = {packId}";
 
                 DataSet dsTrainer = new DataSet();
-                new SqlDataAdapter(cmdTrainer).Fill(dsTrainer);
+                SqlDataAdapter adp2 = new SqlDataAdapter(cmdTrainer);
+                adp2.Fill(dsTrainer);
 
                 if (dsTrainer.Tables[0].Rows.Count > 0)
                     labTrainer.Text = dsTrainer.Tables[0].Rows[0]["Name"].ToString();
@@ -126,7 +127,8 @@ namespace project
                     $"select Goal from DietPlan where UserID = {Session.ID}";
 
                 DataSet dsGoal = new DataSet();
-                new SqlDataAdapter(cmdGoal).Fill(dsGoal);
+                SqlDataAdapter adp3 = new SqlDataAdapter(cmdGoal);
+                adp3.Fill(dsGoal);
 
                 if (dsGoal.Tables[0].Rows.Count > 0)
                     labGoal.Text = dsGoal.Tables[0].Rows[0]["Goal"].ToString();
@@ -140,7 +142,8 @@ namespace project
                     $"select FoodPlan from DietPlan where UserID = {Session.ID}";
 
                 DataSet dsDiet = new DataSet();
-                new SqlDataAdapter(cmdDiet).Fill(dsDiet);
+                SqlDataAdapter adp4 = new SqlDataAdapter(cmdDiet);
+                adp4.Fill(dsDiet);
 
                 if (dsDiet.Tables[0].Rows.Count > 0)
                     rtxtDiet.Text = dsDiet.Tables[0].Rows[0]["FoodPlan"].ToString();
@@ -168,6 +171,20 @@ namespace project
             UpdateInfo U = new UpdateInfo();
             U.Show();
             this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login lg = new Login();
+            lg.Show();
+        }
+
+        private void btnWorkout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserWorkout uw = new UserWorkout();
+            uw.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace project
 {
-    partial class CustomerHome
+    partial class UserWorkout
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerHome));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserWorkout));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -44,11 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.labWelcome = new System.Windows.Forms.Label();
             this.labTrainer = new System.Windows.Forms.Label();
-            this.rtxtDiet = new System.Windows.Forms.RichTextBox();
-            this.labPack = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labGoal = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.rtxtWorkout = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -107,7 +103,6 @@
             this.btnWorkout.TabIndex = 11;
             this.btnWorkout.Text = "Workout";
             this.btnWorkout.UseVisualStyleBackColor = false;
-            this.btnWorkout.Click += new System.EventHandler(this.btnWorkout_Click);
             // 
             // button3
             // 
@@ -149,6 +144,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Home";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -167,9 +163,9 @@
             this.label2.Location = new System.Drawing.Point(437, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 30);
+            this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Home";
+            this.label2.Text = "Workout";
             // 
             // panel2
             // 
@@ -186,7 +182,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(473, 255);
+            this.label4.Location = new System.Drawing.Point(473, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 37);
             this.label4.TabIndex = 8;
@@ -196,26 +192,26 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(473, 386);
+            this.label6.Location = new System.Drawing.Point(473, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 37);
+            this.label6.Size = new System.Drawing.Size(152, 37);
             this.label6.TabIndex = 10;
-            this.label6.Text = "DietPlan :";
+            this.label6.Text = "Workout :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(585, 72);
+            this.label7.Location = new System.Drawing.Point(509, 72);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 37);
+            this.label7.Size = new System.Drawing.Size(249, 37);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Welcome back ";
+            this.label7.Text = "Workout plan for";
             // 
             // labWelcome
             // 
             this.labWelcome.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labWelcome.Location = new System.Drawing.Point(807, 72);
+            this.labWelcome.Location = new System.Drawing.Point(764, 72);
             this.labWelcome.Name = "labWelcome";
             this.labWelcome.Size = new System.Drawing.Size(143, 37);
             this.labWelcome.TabIndex = 16;
@@ -223,80 +219,40 @@
             // labTrainer
             // 
             this.labTrainer.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTrainer.Location = new System.Drawing.Point(654, 255);
+            this.labTrainer.Location = new System.Drawing.Point(609, 175);
             this.labTrainer.Name = "labTrainer";
             this.labTrainer.Size = new System.Drawing.Size(514, 37);
             this.labTrainer.TabIndex = 18;
             // 
-            // rtxtDiet
+            // rtxtWorkout
             // 
-            this.rtxtDiet.BackColor = System.Drawing.SystemColors.Control;
-            this.rtxtDiet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDiet.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtDiet.Location = new System.Drawing.Point(661, 386);
-            this.rtxtDiet.Name = "rtxtDiet";
-            this.rtxtDiet.ReadOnly = true;
-            this.rtxtDiet.Size = new System.Drawing.Size(588, 267);
-            this.rtxtDiet.TabIndex = 20;
-            this.rtxtDiet.Text = "";
+            this.rtxtWorkout.BackColor = System.Drawing.SystemColors.Control;
+            this.rtxtWorkout.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtWorkout.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtWorkout.Location = new System.Drawing.Point(625, 242);
+            this.rtxtWorkout.Name = "rtxtWorkout";
+            this.rtxtWorkout.ReadOnly = true;
+            this.rtxtWorkout.Size = new System.Drawing.Size(624, 399);
+            this.rtxtWorkout.TabIndex = 20;
+            this.rtxtWorkout.Text = "";
             // 
-            // labPack
-            // 
-            this.labPack.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPack.Location = new System.Drawing.Point(654, 198);
-            this.labPack.Name = "labPack";
-            this.labPack.Size = new System.Drawing.Size(514, 37);
-            this.labPack.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(473, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 37);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Package :";
-            // 
-            // labGoal
-            // 
-            this.labGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labGoal.Location = new System.Drawing.Point(654, 318);
-            this.labGoal.Name = "labGoal";
-            this.labGoal.Size = new System.Drawing.Size(514, 37);
-            this.labGoal.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(473, 318);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 37);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Goal :";
-            // 
-            // CustomerHome
+            // UserWorkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 653);
-            this.Controls.Add(this.rtxtDiet);
-            this.Controls.Add(this.labGoal);
+            this.Controls.Add(this.rtxtWorkout);
             this.Controls.Add(this.labTrainer);
-            this.Controls.Add(this.labPack);
             this.Controls.Add(this.labWelcome);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "CustomerHome";
+            this.Name = "UserWorkout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.CustomerHome_Load);
@@ -323,13 +279,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labWelcome;
         private System.Windows.Forms.Label labTrainer;
-        private System.Windows.Forms.RichTextBox rtxtDiet;
+        private System.Windows.Forms.RichTextBox rtxtWorkout;
         private System.Windows.Forms.Button btnWorkout;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labPack;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labGoal;
-        private System.Windows.Forms.Label label5;
     }
 }

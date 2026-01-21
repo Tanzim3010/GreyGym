@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Packages));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fpPackageDash = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHLogin = new System.Windows.Forms.Button();
             this.btnPack = new System.Windows.Forms.Button();
-            this.fpPackageDash = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,6 +53,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1034, 575);
             this.panel1.TabIndex = 0;
+            // 
+            // fpPackageDash
+            // 
+            this.fpPackageDash.AutoScroll = true;
+            this.fpPackageDash.Location = new System.Drawing.Point(8, 89);
+            this.fpPackageDash.Name = "fpPackageDash";
+            this.fpPackageDash.Size = new System.Drawing.Size(1004, 485);
+            this.fpPackageDash.TabIndex = 8;
             // 
             // label4
             // 
@@ -111,6 +119,7 @@
             this.btnHLogin.TabIndex = 1;
             this.btnHLogin.Text = "Login";
             this.btnHLogin.UseVisualStyleBackColor = false;
+            this.btnHLogin.Click += new System.EventHandler(this.btnHLogin_Click);
             this.btnHLogin.MouseLeave += new System.EventHandler(this.btnHLogin_MouseLeave);
             this.btnHLogin.MouseHover += new System.EventHandler(this.btnHLogin_MouseHover);
             // 
@@ -130,14 +139,6 @@
             this.btnPack.Click += new System.EventHandler(this.btnPack_Click);
             this.btnPack.MouseLeave += new System.EventHandler(this.btnPack_MouseLeave);
             this.btnPack.MouseHover += new System.EventHandler(this.btnPack_MouseHover);
-            // 
-            // fpPackageDash
-            // 
-            this.fpPackageDash.AutoScroll = true;
-            this.fpPackageDash.Location = new System.Drawing.Point(8, 89);
-            this.fpPackageDash.Name = "fpPackageDash";
-            this.fpPackageDash.Size = new System.Drawing.Size(1004, 485);
-            this.fpPackageDash.TabIndex = 8;
             // 
             // Packages
             // 

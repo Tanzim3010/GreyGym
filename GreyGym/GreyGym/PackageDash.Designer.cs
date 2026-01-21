@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PackageDash));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnWorkout = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnMember = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +48,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnWorkout);
+            this.panel1.Controls.Add(this.btnProfile);
+            this.panel1.Controls.Add(this.btnMember);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-3, -2);
@@ -57,44 +61,73 @@
             this.panel1.Size = new System.Drawing.Size(259, 664);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // btnLogout
             // 
-            this.button3.BackColor = System.Drawing.Color.Azure;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::GreyGym.Properties.Resources.icons8_profile_35;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(253, 44);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Profile";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.Azure;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Image = global::GreyGym.Properties.Resources.icons8_logout_35;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(3, 476);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(253, 44);
+            this.btnLogout.TabIndex = 17;
+            this.btnLogout.Text = "LogOut";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button2
+            // btnWorkout
             // 
-            this.button2.BackColor = System.Drawing.Color.Azure;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::GreyGym.Properties.Resources.icons8_membership_35;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 293);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(253, 44);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Membership";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnWorkout.BackColor = System.Drawing.Color.Azure;
+            this.btnWorkout.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkout.Image = global::GreyGym.Properties.Resources.icons8_workout_35;
+            this.btnWorkout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWorkout.Location = new System.Drawing.Point(3, 345);
+            this.btnWorkout.Name = "btnWorkout";
+            this.btnWorkout.Size = new System.Drawing.Size(253, 44);
+            this.btnWorkout.TabIndex = 16;
+            this.btnWorkout.Text = "Workout";
+            this.btnWorkout.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnProfile
             // 
-            this.button1.BackColor = System.Drawing.Color.Azure;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::GreyGym.Properties.Resources.icons8_home_35;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 44);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProfile.BackColor = System.Drawing.Color.Azure;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GreyGym.Properties.Resources.icons8_profile_35;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(3, 411);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(253, 44);
+            this.btnProfile.TabIndex = 15;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnMember
+            // 
+            this.btnMember.BackColor = System.Drawing.Color.Azure;
+            this.btnMember.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMember.Image = global::GreyGym.Properties.Resources.icons8_membership_35;
+            this.btnMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMember.Location = new System.Drawing.Point(3, 281);
+            this.btnMember.Name = "btnMember";
+            this.btnMember.Size = new System.Drawing.Size(253, 44);
+            this.btnMember.TabIndex = 14;
+            this.btnMember.Text = "Membership";
+            this.btnMember.UseVisualStyleBackColor = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Azure;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::GreyGym.Properties.Resources.icons8_home_35;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(3, 213);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(253, 44);
+            this.btnHome.TabIndex = 13;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // label1
             // 
@@ -177,9 +210,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel fpPackageDash;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnWorkout;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnMember;
+        private System.Windows.Forms.Button btnHome;
     }
 }
