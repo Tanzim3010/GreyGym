@@ -166,30 +166,63 @@ namespace GreyGym
 
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void btnUser_Click_1(object sender, EventArgs e)
         {
-            ManagerialView_User_ u = new ManagerialView_User_();
-            u.Show();
+            this.Hide();
+            ManagerialView_User_ mgu = new ManagerialView_User_();
+            mgu.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
             this.Hide();
         }
 
         private void btnPaymet_Click(object sender, EventArgs e)
         {
-            ManegerialView_Amount_ a = new ManegerialView_Amount_();
-            a.Show();
             this.Hide();
+            ManegerialView_Amount_ mga = new ManegerialView_Amount_();
+            mga.Show();
         }
 
-        private void btnPackage_Click(object sender, EventArgs e)
+        private void btnDiet_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_DietPlan_ mgd = new ManagerialView_DietPlan_();
+            mgd.Show();
+        }
+
+        private void btnUserpackage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_UserPackage_ mgu = new ManagerialView_UserPackage_();
+            mgu.Show();
+        }
+
+        private void btnGym_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            Login l = new Login();
-            l.Show();
             this.Hide();
+            ManagerialView_TrainerUser_ mgt = new ManagerialView_TrainerUser_();
+            mgt.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
+            mgi.Show();
         }
     }
 }
