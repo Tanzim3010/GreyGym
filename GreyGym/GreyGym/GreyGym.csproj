@@ -47,6 +47,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationHelper.cs" />
+    <Compile Include="EmployeeView%28User%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28User%29.Designer.cs">
+      <DependentUpon>EmployeeView%28User%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28TrainerUser%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28TrainerUser%29.Designer.cs">
+      <DependentUpon>EmployeeView%28TrainerUser%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28Incident%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28Incident%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Incident%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28Packages%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28Packages%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Packages%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28UserPackage%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28UserPackage%29.Designer.cs">
+      <DependentUpon>EmployeeView%28UserPackage%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView%28Amount%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView%28Amount%29.Designer.cs">
+      <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerView%28DietPlan%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerView%28DietPlan%29.Designer.cs">
+      <DependentUpon>TrainerView%28DietPlan%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerView%28TrainerUser%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerView%28TrainerUser%29.Designer.cs">
+      <DependentUpon>TrainerView%28TrainerUser%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerialView%28UserPackage%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +194,30 @@
     <Compile Include="UpdateInfo.Designer.cs">
       <DependentUpon>UpdateInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EmployeeView%28User%29.resx">
+      <DependentUpon>EmployeeView%28User%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28TrainerUser%29.resx">
+      <DependentUpon>EmployeeView%28TrainerUser%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Incident%29.resx">
+      <DependentUpon>EmployeeView%28Incident%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Packages%29.resx">
+      <DependentUpon>EmployeeView%28Packages%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28UserPackage%29.resx">
+      <DependentUpon>EmployeeView%28UserPackage%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView%28Amount%29.resx">
+      <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerView%28DietPlan%29.resx">
+      <DependentUpon>TrainerView%28DietPlan%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerView%28TrainerUser%29.resx">
+      <DependentUpon>TrainerView%28TrainerUser%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerialView%28UserPackage%29.resx">
       <DependentUpon>ManagerialView%28UserPackage%29.cs</DependentUpon>
     </EmbeddedResource>

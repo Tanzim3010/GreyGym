@@ -1,6 +1,6 @@
 ﻿namespace GreyGym
 {
-    partial class ManagerialView_User_
+    partial class EmployeeView_User_
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnGym = new System.Windows.Forms.Button();
             this.btnUserpackage = new System.Windows.Forms.Button();
-            this.btnDiet = new System.Windows.Forms.Button();
             this.btnPackage = new System.Windows.Forms.Button();
             this.btnPaymet = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -291,7 +290,6 @@
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.btnGym);
             this.panel3.Controls.Add(this.btnUserpackage);
-            this.panel3.Controls.Add(this.btnDiet);
             this.panel3.Controls.Add(this.btnPackage);
             this.panel3.Controls.Add(this.btnPaymet);
             this.panel3.Controls.Add(this.btnUser);
@@ -308,7 +306,7 @@
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(5, 430);
+            this.button8.Location = new System.Drawing.Point(5, 397);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(121, 31);
@@ -322,7 +320,7 @@
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(5, 344);
+            this.button7.Location = new System.Drawing.Point(5, 304);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(121, 31);
@@ -336,7 +334,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(5, 385);
+            this.button6.Location = new System.Drawing.Point(5, 353);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 31);
@@ -350,7 +348,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(5, 304);
+            this.button5.Location = new System.Drawing.Point(5, 261);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 31);
@@ -364,7 +362,7 @@
             this.btnGym.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnGym.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGym.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGym.Location = new System.Drawing.Point(5, 260);
+            this.btnGym.Location = new System.Drawing.Point(5, 212);
             this.btnGym.Margin = new System.Windows.Forms.Padding(2);
             this.btnGym.Name = "btnGym";
             this.btnGym.Size = new System.Drawing.Size(121, 31);
@@ -378,7 +376,7 @@
             this.btnUserpackage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnUserpackage.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserpackage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUserpackage.Location = new System.Drawing.Point(5, 212);
+            this.btnUserpackage.Location = new System.Drawing.Point(5, 170);
             this.btnUserpackage.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserpackage.Name = "btnUserpackage";
             this.btnUserpackage.Size = new System.Drawing.Size(121, 31);
@@ -386,20 +384,6 @@
             this.btnUserpackage.Text = "UserPackage";
             this.btnUserpackage.UseVisualStyleBackColor = false;
             this.btnUserpackage.Click += new System.EventHandler(this.btnUserpackage_Click);
-            // 
-            // btnDiet
-            // 
-            this.btnDiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnDiet.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDiet.Location = new System.Drawing.Point(5, 166);
-            this.btnDiet.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDiet.Name = "btnDiet";
-            this.btnDiet.Size = new System.Drawing.Size(121, 31);
-            this.btnDiet.TabIndex = 4;
-            this.btnDiet.Text = "DietPlan";
-            this.btnDiet.UseVisualStyleBackColor = false;
-            this.btnDiet.Click += new System.EventHandler(this.btnDiet_Click);
             // 
             // btnPackage
             // 
@@ -630,7 +614,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ManagerialView_User_
+            // EmployeeView_User_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -638,7 +622,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
-            this.Name = "ManagerialView_User_";
+            this.Name = "EmployeeView_User_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerialView_User_";
             this.Load += new System.EventHandler(this.ManagerialView_User__Load);
@@ -689,7 +673,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnGym;
         private System.Windows.Forms.Button btnUserpackage;
-        private System.Windows.Forms.Button btnDiet;
         private System.Windows.Forms.Button btnPackage;
         private System.Windows.Forms.Button btnPaymet;
         private System.Windows.Forms.Button btnUser;

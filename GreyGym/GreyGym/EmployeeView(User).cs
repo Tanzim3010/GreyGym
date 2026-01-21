@@ -14,9 +14,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GreyGym
 {
-    public partial class ManagerialView_User_ : Form
+    public partial class EmployeeView_User_ : Form
     {
-        public ManagerialView_User_()
+        public EmployeeView_User_()
         {
             InitializeComponent();
         }
@@ -246,7 +246,9 @@ namespace GreyGym
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EmployeeView_User_ egu = new EmployeeView_User_();
+            egu.Show();
         }
 
         private void btnPackage_Click(object sender, EventArgs e)
@@ -254,14 +256,6 @@ namespace GreyGym
             this.Hide();
             ManagerialView_Packages_ mgp = new ManagerialView_Packages_();
             mgp.Show();
-
-        }
-
-        private void btnDiet_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerialView_DietPlan_ mgd = new ManagerialView_DietPlan_();
-            mgd.Show();
         }
 
         private void btnUserpackage_Click(object sender, EventArgs e)
@@ -279,8 +273,8 @@ namespace GreyGym
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_TrainerUser_ mgt = new ManagerialView_TrainerUser_();
-            mgt.Show();
+            EmployeeView_TrainerUser_ etu = new EmployeeView_TrainerUser_();
+            etu.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)

@@ -152,6 +152,18 @@ namespace GreyGym
                     this.Hide();
                     mgu.Show();
                 }
+                else if(type == "Trainer")
+                {
+                    TrainerView_TrainerUser_ tgu = new TrainerView_TrainerUser_();
+                    this.Hide();
+                    tgu.Show();
+                }
+                else if(type == "Employee")
+                {
+                    EmployeeView_User_ egu = new EmployeeView_User_();
+                    this.Hide();
+                    egu.Show();
+                }
                 
                     
             }
