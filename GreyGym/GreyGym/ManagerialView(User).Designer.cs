@@ -84,7 +84,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
@@ -112,7 +112,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(891, 59);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(198, 486);
             this.panel4.TabIndex = 1;
@@ -125,7 +125,7 @@
             "Male",
             "Female"});
             this.cmbGender.Location = new System.Drawing.Point(14, 327);
-            this.cmbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(176, 25);
             this.cmbGender.TabIndex = 16;
@@ -163,7 +163,7 @@
             "Trainer",
             "Office-Clerk"});
             this.cmbUserType.Location = new System.Drawing.Point(14, 385);
-            this.cmbUserType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUserType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUserType.Name = "cmbUserType";
             this.cmbUserType.Size = new System.Drawing.Size(176, 25);
             this.cmbUserType.TabIndex = 13;
@@ -173,7 +173,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(14, 212);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(176, 23);
             this.txtPhone.TabIndex = 12;
@@ -194,7 +194,7 @@
             // 
             this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGmail.Location = new System.Drawing.Point(14, 154);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Size = new System.Drawing.Size(176, 23);
             this.txtGmail.TabIndex = 10;
@@ -215,7 +215,7 @@
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(14, 269);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(176, 23);
             this.txtPass.TabIndex = 8;
@@ -224,7 +224,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(14, 98);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 23);
             this.txtName.TabIndex = 6;
@@ -233,7 +233,7 @@
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(14, 40);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(176, 23);
@@ -289,7 +289,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 59);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(885, 486);
             this.panel3.TabIndex = 2;
@@ -300,7 +300,7 @@
             this.btnGym.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGym.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGym.Location = new System.Drawing.Point(5, 260);
-            this.btnGym.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGym.Margin = new System.Windows.Forms.Padding(2);
             this.btnGym.Name = "btnGym";
             this.btnGym.Size = new System.Drawing.Size(121, 31);
             this.btnGym.TabIndex = 6;
@@ -313,7 +313,7 @@
             this.btnUserpackage.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserpackage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUserpackage.Location = new System.Drawing.Point(5, 212);
-            this.btnUserpackage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserpackage.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserpackage.Name = "btnUserpackage";
             this.btnUserpackage.Size = new System.Drawing.Size(121, 31);
             this.btnUserpackage.TabIndex = 5;
@@ -326,7 +326,7 @@
             this.btnDiet.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDiet.Location = new System.Drawing.Point(5, 166);
-            this.btnDiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDiet.Margin = new System.Windows.Forms.Padding(2);
             this.btnDiet.Name = "btnDiet";
             this.btnDiet.Size = new System.Drawing.Size(121, 31);
             this.btnDiet.TabIndex = 4;
@@ -339,7 +339,7 @@
             this.btnPackage.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPackage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPackage.Location = new System.Drawing.Point(2, 121);
-            this.btnPackage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPackage.Margin = new System.Windows.Forms.Padding(2);
             this.btnPackage.Name = "btnPackage";
             this.btnPackage.Size = new System.Drawing.Size(121, 31);
             this.btnPackage.TabIndex = 3;
@@ -352,7 +352,7 @@
             this.btnPaymet.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPaymet.Location = new System.Drawing.Point(2, 75);
-            this.btnPaymet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPaymet.Margin = new System.Windows.Forms.Padding(2);
             this.btnPaymet.Name = "btnPaymet";
             this.btnPaymet.Size = new System.Drawing.Size(121, 31);
             this.btnPaymet.TabIndex = 2;
@@ -366,7 +366,7 @@
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUser.Location = new System.Drawing.Point(5, 33);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(121, 31);
             this.btnUser.TabIndex = 1;
@@ -387,11 +387,12 @@
             this.Column6,
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(130, -2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(752, 474);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -467,7 +468,7 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(891, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(198, 53);
             this.panel2.TabIndex = 1;
@@ -479,7 +480,7 @@
             this.button4.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(22, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 30);
             this.button4.TabIndex = 3;
@@ -496,7 +497,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(885, 53);
             this.panel1.TabIndex = 0;
@@ -509,7 +510,7 @@
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(206, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 30);
             this.button3.TabIndex = 2;
@@ -524,7 +525,7 @@
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(102, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 30);
             this.button2.TabIndex = 1;
@@ -539,7 +540,7 @@
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(5, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 30);
             this.button1.TabIndex = 0;
@@ -553,7 +554,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 547);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "ManagerialView_User_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
