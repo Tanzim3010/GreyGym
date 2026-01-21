@@ -297,7 +297,7 @@ namespace GreyGym
         private void btnUserpackage_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_UserPackage_ mgu = new ManagerialView_UserPackage_();
+            EmployeeView_UserPackage_ mgu = new EmployeeView_UserPackage_();
             mgu.Show();
         }
 
@@ -321,7 +321,7 @@ namespace GreyGym
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
+            EmployeeView_Incident_ mgi = new EmployeeView_Incident_();
             mgi.Show();
         }
 

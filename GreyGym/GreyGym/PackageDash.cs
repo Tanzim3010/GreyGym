@@ -213,5 +213,12 @@ namespace project
             Login login = new Login();
             login.Show();
         }
+
+        private void btnWorkout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserWorkout uw = new UserWorkout();
+            uw.Show();
+        }
     }
 }

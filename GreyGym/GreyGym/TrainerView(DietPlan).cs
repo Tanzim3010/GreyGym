@@ -260,5 +260,34 @@ namespace GreyGym
             Login lg = new Login();
             lg.Show();
         }
+
+        private void btnDiet_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGym_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainerView_TrainerUser_ tgu = new TrainerView_TrainerUser_();
+            tgu.Show();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login lg = new Login();
+            lg.Show();
+        }
     }
 }

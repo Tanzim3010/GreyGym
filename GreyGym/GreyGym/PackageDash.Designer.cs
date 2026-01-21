@@ -87,6 +87,7 @@
             this.btnWorkout.TabIndex = 16;
             this.btnWorkout.Text = "Workout";
             this.btnWorkout.UseVisualStyleBackColor = false;
+            this.btnWorkout.Click += new System.EventHandler(this.btnWorkout_Click);
             // 
             // btnProfile
             // 

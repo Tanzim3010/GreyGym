@@ -132,30 +132,24 @@ namespace GreyGym
         private void btnUser_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_User_ mgu = new ManagerialView_User_();
+            EmployeeView_User_ mgu = new EmployeeView_User_();
             mgu.Show();
         }
 
         private void btnPaymet_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            ManegerialView_Amount_ mga = new ManegerialView_Amount_();
+            EmployeeView_Amount_ mga = new EmployeeView_Amount_();
             mga.Show();
         }
 
         private void btnPackage_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_Packages_ mgp = new ManagerialView_Packages_();
+            EmployeeView_Packages_ mgp = new EmployeeView_Packages_();
             mgp.Show();
         }
 
-        private void btnDiet_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerialView_DietPlan_ mgd = new ManagerialView_DietPlan_();
-            mgd.Show();
-        }
 
         private void btnUserpackage_Click(object sender, EventArgs e)
         {
@@ -182,7 +176,7 @@ namespace GreyGym
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
+            EmployeeView_Incident_ mgi = new EmployeeView_Incident_();
             mgi.Show();
         }
 
