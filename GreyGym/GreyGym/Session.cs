@@ -8,9 +8,13 @@ namespace GreyGym
 {
     public static class Session
     {
+        public static string PHONE {  get; set; }
+        public static string PASSWORD {  get; set; }
+        public static string GMAIL {  get; set; }
         public static int ID { get; set; }
         public static string Name { get; set; }
         public static int PID { get; set; }
         public static int Amount { get; set; }
+        public static string GENDER { get; set; }
     }
 }

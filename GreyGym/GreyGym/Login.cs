@@ -110,6 +110,8 @@ namespace GreyGym
         {
             string Gmail = txtEmail.Text;
             string Password = txtPass.Text;
+            
+            
 
             try
             {
@@ -126,6 +128,8 @@ namespace GreyGym
                 adp.Fill(ds);
 
                 DataTable dt = ds.Tables[0];
+               
+                
                 connection.Close();
 
                 if (dt.Rows.Count != 1)
@@ -138,6 +142,14 @@ namespace GreyGym
                     Session.ID = userId;
                     Session.Name = dt.Rows[0]["Name"].ToString();
                     string type = dt.Rows[0]["Usertype"].ToString();
+                    Session.GMAIL = Gmail;
+                    Session.PASSWORD = Password;
+                    string Phone = dt.Rows[0]["Phone"].ToString();
+                    Session.PHONE = Phone;
+                    string Gender = dt.Rows[0]["Gender"].ToString();
+                Session.GENDER = Gender;
+                    
+                
 
                 if(type == "Customer")
                 {
@@ -171,6 +183,11 @@ namespace GreyGym
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

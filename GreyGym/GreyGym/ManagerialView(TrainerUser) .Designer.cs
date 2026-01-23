@@ -651,7 +651,7 @@
             this.MaximizeBox = false;
             this.Name = "ManagerialView_TrainerUser_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerialView_User_";
+            this.Text = "ManagerialView_TrainerUser_";
             this.Load += new System.EventHandler(this.ManagerialView_TrainerUser__Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

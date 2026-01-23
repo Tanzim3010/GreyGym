@@ -39,6 +39,7 @@
             this.textBkash = new System.Windows.Forms.TextBox();
             this.btnBkash = new System.Windows.Forms.Button();
             this.btnNagad = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,18 +49,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(126, 47);
+            this.label1.Location = new System.Drawing.Point(94, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 25);
+            this.label1.Size = new System.Drawing.Size(300, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please Choose a Payment Method";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GreyGym.Properties.Resources._71de1a123637063_Y3JvcCwxMzgyLDEwODEsMzA0LDA;
-            this.pictureBox2.Location = new System.Drawing.Point(473, 95);
+            this.pictureBox2.Location = new System.Drawing.Point(355, 77);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 98);
+            this.pictureBox2.Size = new System.Drawing.Size(94, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -69,9 +72,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton2.Location = new System.Drawing.Point(474, 199);
+            this.radioButton2.Location = new System.Drawing.Point(356, 162);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 29);
+            this.radioButton2.Size = new System.Drawing.Size(99, 24);
             this.radioButton2.TabIndex = 8;
             this.radioButton2.Text = "Click Me!";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GreyGym.Properties.Resources.BKash_Group_of_Logos_08;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 95);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 77);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(94, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -92,9 +97,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(30, 199);
+            this.radioButton1.Location = new System.Drawing.Point(22, 162);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(124, 29);
+            this.radioButton1.Size = new System.Drawing.Size(99, 24);
             this.radioButton1.TabIndex = 8;
             this.radioButton1.Text = "Click Me!";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -104,9 +110,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(368, 330);
+            this.label3.Location = new System.Drawing.Point(276, 268);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 16);
+            this.label3.Size = new System.Drawing.Size(151, 13);
             this.label3.TabIndex = 27;
             this.label3.Text = "Our Nagad Number is : 01610 ";
             // 
@@ -114,26 +121,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(23, 330);
+            this.label2.Location = new System.Drawing.Point(17, 268);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 16);
+            this.label2.Size = new System.Drawing.Size(149, 13);
             this.label2.TabIndex = 26;
             this.label2.Text = "Our Bkash Number is : 01610 ";
             // 
             // txtNagad
             // 
             this.txtNagad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNagad.Location = new System.Drawing.Point(363, 349);
+            this.txtNagad.Location = new System.Drawing.Point(272, 284);
+            this.txtNagad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNagad.Name = "txtNagad";
-            this.txtNagad.Size = new System.Drawing.Size(224, 38);
+            this.txtNagad.Size = new System.Drawing.Size(169, 32);
             this.txtNagad.TabIndex = 25;
             // 
             // textBkash
             // 
             this.textBkash.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBkash.Location = new System.Drawing.Point(26, 349);
+            this.textBkash.Location = new System.Drawing.Point(20, 284);
+            this.textBkash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBkash.Name = "textBkash";
-            this.textBkash.Size = new System.Drawing.Size(224, 38);
+            this.textBkash.Size = new System.Drawing.Size(169, 32);
             this.textBkash.TabIndex = 24;
             // 
             // btnBkash
@@ -142,9 +152,10 @@
             this.btnBkash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBkash.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBkash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBkash.Location = new System.Drawing.Point(26, 393);
+            this.btnBkash.Location = new System.Drawing.Point(20, 319);
+            this.btnBkash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBkash.Name = "btnBkash";
-            this.btnBkash.Size = new System.Drawing.Size(129, 69);
+            this.btnBkash.Size = new System.Drawing.Size(97, 56);
             this.btnBkash.TabIndex = 22;
             this.btnBkash.Text = "BKASH";
             this.btnBkash.UseVisualStyleBackColor = true;
@@ -157,20 +168,35 @@
             this.btnNagad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNagad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNagad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNagad.Location = new System.Drawing.Point(458, 395);
+            this.btnNagad.Location = new System.Drawing.Point(344, 321);
+            this.btnNagad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNagad.Name = "btnNagad";
-            this.btnNagad.Size = new System.Drawing.Size(129, 67);
+            this.btnNagad.Size = new System.Drawing.Size(97, 54);
             this.btnNagad.TabIndex = 23;
             this.btnNagad.Text = "NAGAD";
             this.btnNagad.UseVisualStyleBackColor = true;
             this.btnNagad.Click += new System.EventHandler(this.btnNagad_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(199, 375);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 40);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Back To Home";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(635, 552);
+            this.ClientSize = new System.Drawing.Size(476, 448);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radioButton2);
@@ -182,9 +208,10 @@
             this.Controls.Add(this.btnBkash);
             this.Controls.Add(this.btnNagad);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Payment";
+            this.Text = "payment";
             this.Load += new System.EventHandler(this.Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -205,5 +232,6 @@
         private System.Windows.Forms.TextBox textBkash;
         private System.Windows.Forms.Button btnBkash;
         private System.Windows.Forms.Button btnNagad;
+        private System.Windows.Forms.Button button1;
     }
 }

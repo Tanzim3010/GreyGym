@@ -203,7 +203,7 @@ namespace project
         private void btnProfile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UpdateInfo un = new UpdateInfo();
+            ProfileUpdate un = new ProfileUpdate();
             un.Show();
         }
 

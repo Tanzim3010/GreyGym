@@ -581,7 +581,7 @@
             this.MaximizeBox = false;
             this.Name = "TrainerView_DietPlan_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerialView_User_";
+            this.Text = "ManagerialView_DietPlan_";
             this.Load += new System.EventHandler(this.ManagerialView_User__Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

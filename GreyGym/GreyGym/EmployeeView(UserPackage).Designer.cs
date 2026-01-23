@@ -540,7 +540,7 @@
             this.MinimizeBox = false;
             this.Name = "EmployeeView_UserPackage_";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerialView_User_";
+            this.Text = "EmployeeView_User_";
             this.Load += new System.EventHandler(this.ManagerialView_Incident__Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

@@ -101,7 +101,7 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UpdateInfo U = new UpdateInfo();
+            ProfileUpdate U = new ProfileUpdate();
             U.Show();
             this.Hide();
         }

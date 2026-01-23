@@ -83,6 +83,18 @@
     <Compile Include="EmployeeView%28Amount%29.Designer.cs">
       <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate.Designer.cs">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileUpdate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate2.Designer.cs">
+      <DependentUpon>ProfileUpdate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainerView%28DietPlan%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,12 +200,6 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Session.cs" />
-    <Compile Include="UpdateInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateInfo.Designer.cs">
-      <DependentUpon>UpdateInfo.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="EmployeeView%28User%29.resx">
       <DependentUpon>EmployeeView%28User%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeView%28Amount%29.resx">
       <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileUpdate.resx">
+      <DependentUpon>ProfileUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileUpdate2.resx">
+      <DependentUpon>ProfileUpdate2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerView%28DietPlan%29.resx">
       <DependentUpon>TrainerView%28DietPlan%29.cs</DependentUpon>
@@ -272,9 +284,6 @@
     </Compile>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInfo.resx">
-      <DependentUpon>UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

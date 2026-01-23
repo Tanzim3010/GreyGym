@@ -82,6 +82,13 @@ namespace project
                 textBkash.Visible = true;
                 label2.Visible = true;
                 btnBkash.Visible = true;
+
+                label3.Visible = false;
+                txtNagad.Visible = false;
+                btnNagad.Visible = false;
+
+
+
             }
                 
         }
@@ -93,6 +100,10 @@ namespace project
                 txtNagad.Visible= true;
                 label3.Visible = true;
                 btnNagad.Visible = true;
+
+                btnBkash.Visible = false;
+                textBkash.Visible = false;
+                label2.Visible = false;
             }
         }
 
@@ -180,6 +191,13 @@ namespace project
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerHome ch = new CustomerHome();
+            ch.Show();
+            this.Hide();
         }
     }
 }

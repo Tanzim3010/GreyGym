@@ -224,5 +224,58 @@ namespace GreyGym
             ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
             mgi.Show();
         }
+
+        private void Delete()
+        {
+            int id = Convert.ToInt32(txtId.Text);
+            string Pack = txtPackage.Text;
+            int duration = Convert.ToInt32(ttxDuration.Text);
+            int price = Convert.ToInt32(txtPrice.Text);
+            string desc = rDesc.Text;
+            try
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = ApplicationHelper.cs;
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = $"delete from Package where id  = {id}";
+                var result = MessageBox.Show("Are you sure to delete this package? ", "Confirmation", MessageBoxButtons.YesNo);
+             
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Deleted Successfully");
+                    cmd.ExecuteNonQuery();
+                    this.LoadData();
+                    con.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = txtId.Text;
+            if(id == "Auto Generated")
+            {
+                MessageBox.Show("Please select a row first");
+                return;
+            }
+            else
+            {
+                this.Delete();
+            }
+
+           
+        }
     }
 }
