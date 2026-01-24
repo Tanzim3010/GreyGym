@@ -78,7 +78,7 @@ All table schemas and sample data scripts are included in the repository.
 
 ### 2️⃣ Application Setup
 1. Open the project in **Visual Studio**
-2. Update the SQL connection string in:
+2. Update the SQL connection string in: ApplicationHelper.cs
 3. Build and run the project
 
 ---
