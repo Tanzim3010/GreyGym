@@ -184,16 +184,6 @@ namespace MviewWorkout
 
 					checkCmd.CommandText =$"select count(*) from GymEquipment where Ename='{name}' and Category='{category}'";
 
-					int count = Convert.ToInt32(checkCmd.ExecuteScalar());
-
-					if (count > 0)
-					{
-						MessageBox.Show("This equipment already exists!","Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-						con.Close();
-						return;
-					}
-
-
 					SqlCommand cmd = new SqlCommand();
 					cmd.Connection = con;
 
@@ -229,16 +219,6 @@ namespace MviewWorkout
 					checkCmd.Connection = con;
 
 					checkCmd.CommandText =$"select count(*) from GymEquipment where Ename='{name}' and Category='{category}' and ID={id}";
-
-					int count = Convert.ToInt32(checkCmd.ExecuteScalar());
-
-					if (count > 0)
-					{
-						MessageBox.Show("Another equipment with the same name and category already exists!","Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-						con.Close();
-						return;
-					}
-
 
 					SqlCommand cmd = new SqlCommand();
 					cmd.Connection = con;
