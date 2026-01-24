@@ -8,6 +8,6 @@ namespace GreyGym
 {
     internal static class ApplicationHelper
     {
-        public static string cs = "Data Source=SHADEBREAKER\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
+        public static string cs = "Data Source=\\SQLEXPRESS;Initial Catalog=GreyGym;Integrated Security=True;Encrypt=False";
     }
 }
