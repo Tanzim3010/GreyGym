@@ -1,6 +1,6 @@
 ﻿namespace MviewWorkout
 {
-    partial class ManagerialViewWorkout
+    partial class EmployeeViewWorkout
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnGym = new System.Windows.Forms.Button();
             this.btnUserpackage = new System.Windows.Forms.Button();
-            this.btnDiet = new System.Windows.Forms.Button();
             this.btnPackage = new System.Windows.Forms.Button();
             this.btnPaymet = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -176,7 +174,6 @@
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.btnGym);
             this.panel3.Controls.Add(this.btnUserpackage);
-            this.panel3.Controls.Add(this.btnDiet);
             this.panel3.Controls.Add(this.btnPackage);
             this.panel3.Controls.Add(this.btnPaymet);
             this.panel3.Controls.Add(this.btnUser);
@@ -193,7 +190,7 @@
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(8, 417);
+            this.button8.Location = new System.Drawing.Point(8, 401);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(121, 31);
@@ -207,7 +204,7 @@
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(8, 331);
+            this.button7.Location = new System.Drawing.Point(8, 304);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(121, 31);
@@ -220,7 +217,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(8, 372);
+            this.button6.Location = new System.Drawing.Point(8, 350);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(121, 31);
@@ -234,7 +231,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(8, 291);
+            this.button5.Location = new System.Drawing.Point(8, 253);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 31);
@@ -248,7 +245,7 @@
             this.btnGym.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnGym.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGym.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGym.Location = new System.Drawing.Point(8, 247);
+            this.btnGym.Location = new System.Drawing.Point(8, 208);
             this.btnGym.Margin = new System.Windows.Forms.Padding(2);
             this.btnGym.Name = "btnGym";
             this.btnGym.Size = new System.Drawing.Size(121, 31);
@@ -262,7 +259,7 @@
             this.btnUserpackage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnUserpackage.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserpackage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUserpackage.Location = new System.Drawing.Point(8, 199);
+            this.btnUserpackage.Location = new System.Drawing.Point(8, 158);
             this.btnUserpackage.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserpackage.Name = "btnUserpackage";
             this.btnUserpackage.Size = new System.Drawing.Size(121, 31);
@@ -270,20 +267,6 @@
             this.btnUserpackage.Text = "UserPackage";
             this.btnUserpackage.UseVisualStyleBackColor = false;
             this.btnUserpackage.Click += new System.EventHandler(this.btnUserpackage_Click);
-            // 
-            // btnDiet
-            // 
-            this.btnDiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnDiet.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDiet.Location = new System.Drawing.Point(8, 153);
-            this.btnDiet.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDiet.Name = "btnDiet";
-            this.btnDiet.Size = new System.Drawing.Size(121, 31);
-            this.btnDiet.TabIndex = 24;
-            this.btnDiet.Text = "DietPlan";
-            this.btnDiet.UseVisualStyleBackColor = false;
-            this.btnDiet.Click += new System.EventHandler(this.btnDiet_Click);
             // 
             // btnPackage
             // 
@@ -404,7 +387,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -457,18 +439,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(369, 1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 37);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Workout";
-            // 
-            // ManagerialViewWorkout
+            // EmployeeViewWorkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -476,9 +447,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "ManagerialViewWorkout";
+            this.Name = "EmployeeViewWorkout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerialViewWorkout";
+            this.Text = "EmployeeViewWorkout";
             this.Load += new System.EventHandler(this.ManagerialViewWorkout_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -487,7 +458,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -519,10 +489,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnGym;
         private System.Windows.Forms.Button btnUserpackage;
-        private System.Windows.Forms.Button btnDiet;
         private System.Windows.Forms.Button btnPackage;
         private System.Windows.Forms.Button btnPaymet;
         private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Label label9;
     }
 }

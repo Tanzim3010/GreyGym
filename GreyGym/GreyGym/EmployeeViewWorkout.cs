@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace MviewWorkout
 {
-	public partial class ManagerialViewWorkout : Form
+	public partial class EmployeeViewWorkout : Form
 	{
-		public ManagerialViewWorkout()
+		public EmployeeViewWorkout()
 		{
 			InitializeComponent();
 		}
@@ -223,7 +223,7 @@ namespace MviewWorkout
         private void btnUser_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_User_ mgu = new ManagerialView_User_();
+			EmployeeView_User_ mgu = new EmployeeView_User_();
 			mgu.Show();
         }
 
@@ -231,7 +231,7 @@ namespace MviewWorkout
         private void btnPaymet_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManegerialView_Amount_ mga = new ManegerialView_Amount_();
+			EmployeeView_Amount_ mga = new EmployeeView_Amount_();
 			mga.Show();
         }
 
@@ -245,42 +245,35 @@ namespace MviewWorkout
         private void btnPackage_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_Packages_ mgp = new ManagerialView_Packages_();
+			EmployeeView_Packages_ mgp = new EmployeeView_Packages_();
 			mgp.Show();
-        }
-
-        private void btnDiet_Click(object sender, EventArgs e)
-        {
-			this.Hide();
-			ManagerialView_DietPlan_ mgd = new ManagerialView_DietPlan_();
-			mgd.Show();
         }
 
         private void btnUserpackage_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_UserPackage_ mgp = new ManagerialView_UserPackage_();
+			EmployeeView_UserPackage_ mgp = new EmployeeView_UserPackage_();
 			mgp.Show();
         }
 
         private void btnGym_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			MviewEquipment mge = new MviewEquipment();
+			EviewEquipment mge = new EviewEquipment();
 			mge.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_TrainerUser_ mgt = new ManagerialView_TrainerUser_();
+			EmployeeView_TrainerUser_ mgt = new EmployeeView_TrainerUser_();
 			mgt.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
+			EmployeeView_Incident_ mgi = new EmployeeView_Incident_();
 			mgi.Show();
         }
     }

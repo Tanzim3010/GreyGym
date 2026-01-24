@@ -1,5 +1,6 @@
 ﻿using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using project;
 using System;
 using System.Collections.Generic;
@@ -268,7 +269,9 @@ namespace GreyGym
 
         private void btnGym_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TviewEquipment tviewEquipment = new TviewEquipment();
+            tviewEquipment.Show();
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -280,7 +283,9 @@ namespace GreyGym
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TrainerViewWorkout tvw = new TrainerViewWorkout();
+            tvw.Show();
         }
 
         private void button8_Click_1(object sender, EventArgs e)

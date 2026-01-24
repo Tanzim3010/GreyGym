@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using GreyGym;
+using MviewWorkout;
 
 namespace GreyGym
 {
@@ -310,7 +311,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            MviewEquipment mge = new MviewEquipment();
+            mge.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -322,7 +325,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ManagerialViewWorkout workout = new ManagerialViewWorkout();
+            workout.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

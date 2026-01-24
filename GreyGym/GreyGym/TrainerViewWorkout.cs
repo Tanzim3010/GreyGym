@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace MviewWorkout
 {
-	public partial class ManagerialViewWorkout : Form
+	public partial class TrainerViewWorkout : Form
 	{
-		public ManagerialViewWorkout()
+		public TrainerViewWorkout()
 		{
 			InitializeComponent();
 		}
@@ -172,11 +172,6 @@ namespace MviewWorkout
 			
 		}
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button9_Click(object sender, EventArgs e)
         {
 			string id = txtId.Text;
@@ -220,68 +215,32 @@ namespace MviewWorkout
 			}
 		}
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void btnDiet_Click_1(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_User_ mgu = new ManagerialView_User_();
-			mgu.Show();
-        }
-
-
-        private void btnPaymet_Click(object sender, EventArgs e)
-        {
-			this.Hide();
-			ManegerialView_Amount_ mga = new ManegerialView_Amount_();
-			mga.Show();
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-			this.Hide();
-			Login lg = new Login();
-			lg.Show();
-        }
-
-        private void btnPackage_Click(object sender, EventArgs e)
-        {
-			this.Hide();
-			ManagerialView_Packages_ mgp = new ManagerialView_Packages_();
-			mgp.Show();
-        }
-
-        private void btnDiet_Click(object sender, EventArgs e)
-        {
-			this.Hide();
-			ManagerialView_DietPlan_ mgd = new ManagerialView_DietPlan_();
-			mgd.Show();
-        }
-
-        private void btnUserpackage_Click(object sender, EventArgs e)
-        {
-			this.Hide();
-			ManagerialView_UserPackage_ mgp = new ManagerialView_UserPackage_();
-			mgp.Show();
+			TrainerView_DietPlan_ tgd = new TrainerView_DietPlan_();
+			tgd.Show();
         }
 
         private void btnGym_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			MviewEquipment mge = new MviewEquipment();
-			mge.Show();
+			TviewEquipment tge = new TviewEquipment();
+			tge.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_TrainerUser_ mgt = new ManagerialView_TrainerUser_();
-			mgt.Show();
+			TrainerView_TrainerUser_ tgu = new TrainerView_TrainerUser_();
+			tgu.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
 			this.Hide();
-			ManagerialView_Incident_ mgi = new ManagerialView_Incident_();
-			mgi.Show();
+			Login lg = new Login();
+			lg.Show();
         }
     }
 }

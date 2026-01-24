@@ -83,11 +83,35 @@
     <Compile Include="EmployeeView%28Amount%29.Designer.cs">
       <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeViewWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeViewWorkout.Designer.cs">
+      <DependentUpon>EmployeeViewWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerViewWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerViewWorkout.Designer.cs">
+      <DependentUpon>TrainerViewWorkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerialViewWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerialViewWorkout.Designer.cs">
       <DependentUpon>ManagerialViewWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EviewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EviewEquipment.Designer.cs">
+      <DependentUpon>EviewEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TviewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TviewEquipment.Designer.cs">
+      <DependentUpon>TviewEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="MviewEquipment.cs">
       <SubType>Form</SubType>
@@ -230,8 +254,20 @@
     <EmbeddedResource Include="EmployeeView%28Amount%29.resx">
       <DependentUpon>EmployeeView%28Amount%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeViewWorkout.resx">
+      <DependentUpon>EmployeeViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerViewWorkout.resx">
+      <DependentUpon>TrainerViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerialViewWorkout.resx">
       <DependentUpon>ManagerialViewWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EviewEquipment.resx">
+      <DependentUpon>EviewEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TviewEquipment.resx">
+      <DependentUpon>TviewEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MviewEquipment.resx">
       <DependentUpon>MviewEquipment.cs</DependentUpon>

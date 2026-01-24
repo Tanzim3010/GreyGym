@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MviewWorkout;
 using project;
 
 namespace GreyGym
@@ -195,7 +196,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EviewEquipment eviewEquipment = new EviewEquipment();
+            eviewEquipment.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -207,7 +210,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EmployeeViewWorkout user = new EmployeeViewWorkout();
+            user.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

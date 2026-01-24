@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GreyGym;
 using Microsoft.SqlServer.Server;
+using MviewWorkout;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace GreyGym
@@ -232,7 +233,9 @@ namespace GreyGym
 
         private void btnGym_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EviewEquipment eview = new EviewEquipment();
+            eview.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -244,7 +247,9 @@ namespace GreyGym
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            EmployeeViewWorkout evw = new EmployeeViewWorkout();
+            evw.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
